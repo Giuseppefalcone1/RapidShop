@@ -6,8 +6,30 @@
     --colorIce : #E5EBEA;
 }
 
+@font-face {
+    font-family: "PPFragment-SerifExtraBold";
+    src: url("./fonts/PPFragment-SerifExtraBold.ttf");
+}
+@font-face {
+    font-family: "PPFragment-SerifRegular";
+    src: url("./fonts/PPFragment-SerifRegular.ttf");
+}
+@font-face {
+    font-family: "PPMori-Regular";
+    src: url("./fonts/PPMori-Regular.ttf");
+}
+@font-face {
+    font-family: "PPMori-SemiBold";
+    src: url("./fonts/PPMori-SemiBold.ttf");
+}
+
+
 body{
     background-color: var(--colorIce);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "PPFragment-SerifExtraBold";
 }
 
 .tx-primary{
@@ -25,6 +47,8 @@ body{
 }
 .sf-secondary{
     color: var(--colorSecondary);
-}.sf-ice{
+}
+
+.sf-ice{
     color: var(--colorIce);
 }
