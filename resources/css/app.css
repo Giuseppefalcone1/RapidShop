@@ -1,4 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import './register.css';
 
 :root{
     --colorPrimary : #13C1AC;
