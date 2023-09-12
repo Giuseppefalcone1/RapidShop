@@ -12,20 +12,24 @@ class CreateAnnouncement extends Component
     public $name;
     public $description;
     public $price;
+    public $category_id;
 
     protected $rules =[
         'name' => 'required',
         'description' => 'required|min:10',
-        'price' => 'required|numeric'
+        'price' => 'required|numeric',
+        'category_id' => 'required'
     ];
 
 
 
     public function store(){
+        $this->validate();
         Auth::user()->announcements()->create([
             'name' => $this->name,
             'description' => $this->description,
-            'price' => $this->price
+            'price' => $this->price,
+            'category_id' => $this->category_id
         ]);
 
         $this->reset();

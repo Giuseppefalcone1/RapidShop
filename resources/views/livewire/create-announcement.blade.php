@@ -10,6 +10,14 @@
         <div class="text-danger">@error('description') {{ $message }} @enderror</div>
     </div>
     <div class="mb-3">
+        <label class="form-label">Categoria</label>
+        <select wire:model="category_id" class="form-select">
+            @foreach(App\Models\Category::all() as $category)
+               <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+        </select>
+    </div>
+    <div class="mb-3">
         <label class="form-label">Prezzo</label>
         <input wire:model="price" type="number" class="form-control">
         <div class="text-danger">@error('price') {{ $message }} @enderror</div>
