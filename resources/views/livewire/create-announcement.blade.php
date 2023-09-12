@@ -13,7 +13,7 @@
         <label class="form-label">Categoria</label>
         <select wire:model="category_id" class="form-select">
             @foreach(App\Models\Category::all() as $category)
-               <option value="{{ $category->id }}">{{ $category->name }}</option>
+            <option value="{{ $category->id }}">{{ $category->name }}</option>
             @endforeach
         </select>
     </div>

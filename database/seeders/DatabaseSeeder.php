@@ -17,20 +17,30 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-         User::factory()->create([
-             'name' => 'luke',
-             'email' => 'luca@luca.com',
-             'password' => Hash::make('password')
-         ]);
+        User::factory()->create([
+            'name' => 'luke',
+            'email' => 'luca@luca.com',
+            'password' => Hash::make('password')
+        ]);
 
-         $categories = [
-            'Casa e Giardino', 'Console e Videogiochi', 'Cinema Libri e Musica', 'Sport e Tempo Libero', 'Telefonia e Accessori'. 'Informatica e Elettronica', 'TV, Audio e Fotocamere', 'Collezionismo', 'Moda e Accessori', 'Auto e Moto', 'Elettrodomestici'
-         ];
+        $categories = [
+            'Casa e Giardino', 
+            'Console e Videogiochi', 
+            'Cinema Libri e Musica', 
+            'Sport e Tempo Libero', 
+            'Telefonia e Accessori' . 
+            'Informatica e Elettronica', 
+            'TV, Audio e Fotocamere', 
+            'Collezionismo', 
+            'Moda e Accessori', 
+            'Auto e Moto', 
+            'Elettrodomestici'
+        ];
 
-         foreach($categories as $category){
+        foreach ($categories as $category) {
             Category::create([
                 'name' => $category
             ]);
-         }
+        }
     }
 }
