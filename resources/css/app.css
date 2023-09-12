@@ -8,19 +8,19 @@
 
 @font-face {
     font-family: "PPFragment-SerifExtraBold";
-    src: url("./fonts/PPFragment-SerifExtraBold.ttf");
+    src: url("{{public_path('/fonts/PPFragment-SerifExtraBold.ttf')}}");
 }
 @font-face {
     font-family: "PPFragment-SerifRegular";
-    src: url("./fonts/PPFragment-SerifRegular.ttf");
+    src: url("/fonts/PPFragment-SerifRegular.ttf");
 }
 @font-face {
     font-family: "PPMori-Regular";
-    src: url("./fonts/PPMori-Regular.ttf");
+    src: url("/fonts/PPMori-Regular.ttf");
 }
 @font-face {
     font-family: "PPMori-SemiBold";
-    src: url("./fonts/PPMori-SemiBold.ttf");
+    src: url("/fonts/PPMori-SemiBold.ttf");
 }
 
 
