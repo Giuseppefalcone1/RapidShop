@@ -16,8 +16,20 @@ class CreateAnnouncement extends Component
     protected $rules = [
         'name' => 'required',
         'description' => 'required|min:10',
-        'price' => 'required|numeric',
+        'price' => 'required|numeric|max:5',
         'category_id' => 'required',
+    ];
+
+    protected $messages = [
+
+        'name.required' => "Il campo Nome è obbligatorio",
+        'description.required' => "Il campo Descrizione è obbligatorio",
+        'description.min' => "Il campo Descrizione deve avere più di 10 caratteri",
+        'price.required' => 'Il campo Prezzo è obbligatorio',
+        'price.numeric' => 'Il campo Prezzo deve contenere solo numeri',
+        'price.max' => 'Max: 99.999',
+        'category_id.required' => "Il campo Categoria è obbligatorio"
+
     ];
 
     public function store()

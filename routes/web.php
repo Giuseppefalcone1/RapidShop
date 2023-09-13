@@ -8,7 +8,7 @@ use App\Http\Controllers\PublicController;
 Route::get('/',[PublicController::class, 'home'])->name('welcome');
 Route::get('/announcement/show/{announcement}',[PublicController::class, 'show'])->name('announcement.show');
 Route::get('/announcement/index', [AnnouncementController::class, 'index'])->name('announcement.index');
-
+Route::get('/announcement/bycategory/{category}',[AnnouncementController::class, 'bycategory'])->name('announcement.bycategory');
 
 // rotte private
 Route::middleware(['auth'])->group(function(){
