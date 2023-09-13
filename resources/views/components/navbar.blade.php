@@ -7,7 +7,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-                @guest
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle m-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
@@ -19,8 +18,9 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link m-1" href="{{ route('announcement.index') }}">Tutti i Prodotti</a>
+                    <a class="nav-link m-1 text-nowrap" href="{{ route('announcement.index') }}">Tutti i Prodotti</a>
                 </li>
+                @guest
                 <li class="nav-item">
                     <a class="btn-registrazione btn m-1" href="{{ route('register') }}">Registrati</a>
                 </li>
@@ -36,14 +36,14 @@
                     <div class="row align-items-center">
                         <div class="col-6">
                             <li class="nav-item ">
-                                <p class="my-auto text-end px-2">{{ Auth::user()->name }}</p>
+                                <p class="my-auto text-end">Ciao {{ Auth::user()->name }}!</p>
                             </li>
                         </div>
                         <div class="col-4">
                             <li class="nav-item">
-                                <form action="{{ route('logout') }}" method="POST">
+                                <form class="w-100" action="{{ route('logout') }}" method="POST">
                                     @csrf
-                                    <button class="btn btn-primary px-2">Logout</button>
+                                    <button class="btn btn-logout">Logout</button>
                                 </form>
                             </li>
                         </div>

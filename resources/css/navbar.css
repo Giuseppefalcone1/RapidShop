@@ -39,3 +39,24 @@
     border: 2px solid rgb(15, 151, 135);
     color: var(--colorIce);
 }
+
+.btn-logout {
+    text-align: center;
+    background-color: var(--colorSecondary);
+    border: 2px solid var(--colorSecondary);
+    border-radius: 25px;
+    padding: 0.5rem 0.8rem;
+    transition: all ease-in-out 0.2s;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorIce);
+    font-weight: 600;
+}
+
+.btn-logout:hover {
+    background-color: rgb(218, 142, 36);
+    border: 2px solid rgb(218, 142, 36);
+    color: var(--colorIce);
+}
