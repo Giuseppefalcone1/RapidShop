@@ -11,7 +11,7 @@
                 <a href="{{ route('announcement.show', $announcement) }}" class="btn btn-primary">Dettagli</a>
             </div>
         </div>
-        <a href="#" class="nav-link">{{ $announcement->category->name }}</a>
+        <a href="{{route('announcement.bycategory', $announcement->category )}}" class="nav-link">{{ $announcement->category->name }}</a>
         <div class="card-footer">
             <p>data di pubblicazione: {{ $announcement->created_at->format('d/m/y') }}</p>
         </div>

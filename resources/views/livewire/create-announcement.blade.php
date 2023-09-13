@@ -12,10 +12,13 @@
     <div class="mb-3">
         <label class="form-label">Categoria</label>
         <select wire:model="category_id" class="form-select">
+            <option value="">-- seleziona una categoria --</option>
             @foreach($categories as $category)
             <option value="{{ $category->id }}">{{ $category->name }}</option>
             @endforeach
         </select>
+        <div class="text-danger">@error('category_id') {{ $message }} @enderror</div>
+
     </div>
     <div class="mb-3">
         <label class="form-label">Prezzo</label>

@@ -16,7 +16,7 @@ class CreateAnnouncement extends Component
     protected $rules = [
         'name' => 'required',
         'description' => 'required|min:10',
-        'price' => 'required|numeric|max:5',
+        'price' => 'required|numeric|max:99999',
         'category_id' => 'required',
     ];
 

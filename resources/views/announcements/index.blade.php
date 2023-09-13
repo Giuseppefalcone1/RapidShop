@@ -1,5 +1,5 @@
 <x-layout>
-<div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center">TUTTI I PRODOTTI</h1>
@@ -13,7 +13,7 @@
             @empty
                 <h2>NON CI SONO ANCORA ANNUNCI</h2>
             @endforelse
-            {{$announcements->links()}}
+            {{ $announcements->links() }}
         </div>
     </div>
 </x-layout>
