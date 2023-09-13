@@ -10,6 +10,7 @@
     align-items: center;
     color: var(--colorPrimary);
     font-weight: 600;
+    width: 120px;
 }
 
 .btn-registrazione:hover {
@@ -30,6 +31,7 @@
     align-items: center;
     color: var(--colorIce);
     font-weight: 600;
+    width: 120px;
 }
 
 .btn-login:hover {

@@ -6,20 +6,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                 @guest
-                <li class="nav-item">
-                    <a class="btn-registrazione btn" href="{{ route('register') }}">Registrati</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn-login btn" href="{{ route('login') }}">Login</a>
-                </li>
-                @endguest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('announcement.index') }}">Tutti i Prodotti</a>
-                </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle m-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
                     <ul class="dropdown-menu">
@@ -28,22 +18,32 @@
                         @endforeach
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link m-1" href="{{ route('announcement.index') }}">Tutti i Prodotti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn-registrazione btn m-1" href="{{ route('register') }}">Registrati</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn-login btn m-1" href="{{ route('login') }}">Login</a>
+                </li>
+                @endguest
                 @auth
                 <li class="nav-item">
                     <a href="{{route('announcement.create')}}" class="nav-link text-nowrap">Aggiungi annuncio</a>
                 </li>
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-8 ">
+                        <div class="col-6">
                             <li class="nav-item ">
-                                <p class="my-auto text-end">{{ Auth::user()->name }}</p>
+                                <p class="my-auto text-end px-2">{{ Auth::user()->name }}</p>
                             </li>
                         </div>
                         <div class="col-4">
                             <li class="nav-item">
                                 <form action="{{ route('logout') }}" method="POST">
                                     @csrf
-                                    <button class="btn btn-primary">Logout</button>
+                                    <button class="btn btn-primary px-2">Logout</button>
                                 </form>
                             </li>
                         </div>
