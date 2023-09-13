@@ -1,0 +1,39 @@
+.btn-registrazione {
+    text-align: center;
+    border: 2px solid var(--colorPrimary);
+    border-radius: 25px;
+    padding: 0.5rem 0.8rem;
+    transition: all ease-in-out 0.2s;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorPrimary);
+    font-weight: 600;
+}
+
+.btn-registrazione:hover {
+    background-color: var(--colorPrimary);
+    color: var(--colorIce);
+}
+
+.btn-login {
+    text-align: center;
+    background-color: var(--colorPrimary);
+    border: 2px solid var(--colorPrimary);
+    border-radius: 25px;
+    padding: 0.5rem 0.8rem;
+    transition: all ease-in-out 0.2s;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorIce);
+    font-weight: 600;
+}
+
+.btn-login:hover {
+    background-color: rgb(15, 151, 135);
+    border: 2px solid rgb(15, 151, 135);
+    color: var(--colorIce);
+}

@@ -30,6 +30,14 @@ h1, h2, h3, h4, h5, h6{
     font-family: "PPFragment-SerifExtraBold";
 }
 
+p, a, button {
+    font-family: "PPMori-Regular";
+}
+
+.font-titoli {
+    font-family: "PPFragment-SerifExtraBold";
+}
+
 .tx-primary{
     color: var(--colorPrimary);
 }

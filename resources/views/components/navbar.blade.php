@@ -1,40 +1,36 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="/media/logo.png" alt="RapidShop logo" class="me-2" width="30" height="24">
+        <a class="navbar-brand font-titoli" href="{{ route('welcome') }}">RapidShop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('welcome') }}">Home</a>
-                </li>
                 @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="btn-registrazione btn" href="{{ route('register') }}">Registrati</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn-login btn" href="{{ route('login') }}">Login</a>
+                </li>
                 @endguest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('announcement.index') }}">Tutti i Prodotti</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
                     <ul class="dropdown-menu">
                         @foreach($categories as $category)
-                          <li><a class="dropdown-item" href="{{route('announcement.bycategory', $category )}}">{{ $category->name }}</a></li>
+                        <li><a class="dropdown-item" href="{{route('announcement.bycategory', $category )}}">{{ $category->name }}</a></li>
                         @endforeach
                     </ul>
                 </li>
                 @auth
                 <li class="nav-item">
-                  <a href="{{route('announcement.create')}}" class="nav-link text-nowrap">Aggiungi annuncio</a>
+                    <a href="{{route('announcement.create')}}" class="nav-link text-nowrap">Aggiungi annuncio</a>
                 </li>
                 <div class="container">
                     <div class="row align-items-center">
@@ -53,12 +49,12 @@
                         </div>
                     </div>
                 </div>
-            @endauth
+                @endauth
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <!-- <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </form> -->
         </div>
     </div>
 </nav>
