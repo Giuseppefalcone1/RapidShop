@@ -18,19 +18,18 @@
                         <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
                 @endguest
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('announcement.index') }}">Tutti i Prodotti</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Dropdown
+                        Categorie
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        @foreach($categories as $category)
+                          <li><a class="dropdown-item" href="#">{{ $category->name }}</a></li>
+                        @endforeach
                     </ul>
                 </li>
                 @auth

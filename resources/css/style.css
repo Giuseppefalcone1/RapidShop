@@ -1,0 +1,52 @@
+:root{
+    --colorPrimary : #13C1AC;
+    --colorSecondary : #FFA323;
+    --colorIce : #E5EBEA;
+}
+
+@font-face {
+    font-family: "PPFragment-SerifExtraBold";
+    src: url('/public/fonts/PPFragment-SerifExtraBold.ttf');
+}
+@font-face {
+    font-family: "PPFragment-SerifRegular";
+    src: url("/public/fonts/PPFragment-SerifRegular.ttf");
+}
+@font-face {
+    font-family: "PPMori-Regular";
+    src: url("/public/fonts/PPMori-Regular.ttf");
+}
+@font-face {
+    font-family: "PPMori-SemiBold";
+    src: url("/public/fonts/PPMori-SemiBold.ttf");
+}
+
+
+body{
+    background-color: var(--colorIce);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "PPFragment-SerifExtraBold";
+}
+
+.tx-primary{
+    color: var(--colorPrimary);
+}
+.tx-secondary{
+    color: var(--colorSecondary);
+}
+.tx-ice{
+    color: var(--colorIce);
+}
+
+.sf-primary{
+    color: var(--colorPrimary);
+}
+.sf-secondary{
+    color: var(--colorSecondary);
+}
+
+.sf-ice{
+    color: var(--colorIce);
+}

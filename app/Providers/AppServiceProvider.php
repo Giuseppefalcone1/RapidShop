@@ -2,11 +2,12 @@
 
 namespace App\Providers;
 
-use App\Models\Announcement;
+use Schema;
 use App\Models\Category;
+use App\Models\Announcement;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,5 +31,8 @@ class AppServiceProvider extends ServiceProvider
             View::share('categories',$categories);
             View::share('announcements',$announcements);
         }
+        
+        Paginator::useBootstrapFive();
+        //Paginator::useBootstrapFour();
     }
 }
