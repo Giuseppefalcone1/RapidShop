@@ -8,35 +8,40 @@ use Illuminate\Support\Facades\Auth;
 
 class CreateAnnouncement extends Component
 {
-    
     public $name;
     public $description;
     public $price;
     public $category_id;
 
-    protected $rules =[
+    protected $rules = [
         'name' => 'required',
         'description' => 'required|min:10',
         'price' => 'required|numeric',
-        'category_id' => 'required'
+        'category_id' => 'required',
     ];
 
-
-
-    public function store(){
+    public function store()
+    {
         $this->validate();
-        Auth::user()->announcements()->create([
-            'name' => $this->name,
-            'description' => $this->description,
-            'price' => $this->price,
-            'category_id' => $this->category_id
-        ]);
-
-        $this->reset();
-        return redirect()->route('welcome')->with('message', "Il tuo annuncio è stato inserito correttamente!");
+        Auth::user()
+            ->announcements()
+            ->create([
+                'name' => $this->name,
+                'description' => $this->description,
+                'price' => $this->price,
+                'category_id' => $this->category_id,
+            ]);
+        session()->flash('status', 'Il tuo annuncio è stato inserito correttamente!');
+        $this->redirect('/announcement/create');
+        $this->clear();
     }
 
-
+    public function clear()
+    {
+        $this->name = '';
+        $this->description = '';
+        $this->price = '';
+    }
     public function render()
     {
         return view('livewire.create-announcement');
