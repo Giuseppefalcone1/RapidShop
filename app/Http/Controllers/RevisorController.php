@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BecomeRevisor;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class RevisorController extends Controller
 {
@@ -21,8 +24,16 @@ class RevisorController extends Controller
         return redirect()->back()->with('message','Annuncio rifutato correttamente');
     }
 
-    public function becomeRevisor(){
-        return view('become.revisor');
+    public function formRevisor(){
+        return view('revisor.becomeRevisor');
+    }
+
+    public function becomeRevisor(Request $request){
+
+        $coverLetter = $request->coverLetter;
+        Mail::to('admin@rapidshop.com')->send(new BecomeRevisor(Auth::user(),$coverLetter));
+
+        return redirect()->route('welcome');
     }
 
 }
