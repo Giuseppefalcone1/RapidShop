@@ -21,4 +21,8 @@ class RevisorController extends Controller
         return redirect()->back()->with('message','Annuncio rifutato correttamente');
     }
 
+    public function becomeRevisor(){
+        return view('become.revisor');
+    }
+
 }

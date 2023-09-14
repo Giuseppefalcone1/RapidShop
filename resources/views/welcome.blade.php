@@ -1,5 +1,11 @@
 <x-layout title="rapidshop homepage">
 
+    @if (session('access.denied'))
+            <div class="alert alert-danger m-0">
+                {{ session('access.denied') }}
+            </div>
+    @endif
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-12">
@@ -18,3 +24,4 @@
     </div>
 
 </x-layout>
+
