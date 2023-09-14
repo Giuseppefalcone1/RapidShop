@@ -19,3 +19,5 @@ Route::middleware(['auth'])->group(function(){
 
 //rotte revisor
 Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+Route::patch('/accetta/annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
+Route::patch('/rifiuta/annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
