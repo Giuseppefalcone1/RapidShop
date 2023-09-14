@@ -17,11 +17,11 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'luke',
-            'email' => 'luca@luca.com',
-            'password' => Hash::make('password')
-        ]);
+        // User::factory()->create([
+        //     'name' => 'luke',
+        //     'email' => 'luca@luca.com',
+        //     'password' => Hash::make('password')
+        // ]);
 
         $categories = [
             'Casa e Giardino', 
