@@ -5,6 +5,11 @@
                 {{ session('access.denied') }}
             </div>
     @endif
+    @if (session('message'))
+            <div class="alert alert-success m-0">
+                {{ session('message') }}
+            </div>
+    @endif
 
     <div class="container mt-5">
         <div class="row">
@@ -24,4 +29,3 @@
     </div>
 
 </x-layout>
-

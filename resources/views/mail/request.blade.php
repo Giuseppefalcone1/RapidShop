@@ -13,6 +13,7 @@
         <li>Nome: {{$user->name}}</li>
         <li>email: {{$user->email}}</li>
         <li>cover letter: {{$coverLetter}}</li>
+        <a href="{{ route('make.revisor', Auth::user()) }}">Rendi revisore</a>
     </ul>
 </body>
 </html>
