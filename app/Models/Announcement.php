@@ -13,18 +13,19 @@ class Announcement extends Model
     use HasFactory , Searchable;
 
     protected $fillable = ['name','description','price', 'category_id'];
-      /**
+    /**
      * Get the indexable data array for the model.
      *
      * @return array
      */
 
-    public function toSearchebleArray(){
+    public function toSearchableArray(){
+        $category = $this->category;
         $array =[
             'id'=> $this->id,
-            'title'=> $this->title,
+            'name'=> $this->name,
             'description'=>$this->description,
-            "category"=>$this->category
+            "category"=>$category
         ];
         return $array;
     }

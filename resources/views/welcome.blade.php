@@ -14,8 +14,8 @@
         </div>
         <div class="row my-4 justify-content-center">
             <div class="col-8 d-flex justify-content-center">
-                <form class="search w-100">
-                    <input placeholder="Search..." type="text">
+                <form action="{{ route('announcements.search') }}" method="GET" class="search w-100">
+                    <input name="searched" placeholder="Cerca..." type="text">
                     <button type="submit">Ricerca</button>
                 </form>
             </div>

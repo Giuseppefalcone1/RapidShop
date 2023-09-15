@@ -7,11 +7,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-                <li class="nav-item">                     
-                    <form class="search w-100">
-                        <input placeholder="Search..." type="text">
-                        <button type="submit">Ricerca</button>
-                    </form>
+                <li class="nav-item">
+                <form action="{{ route('announcements.search') }}" method="GET" class="search w-100">
+                    <input name="searched" placeholder="Cerca..." type="text">
+                    <button type="submit">Ricerca</button>
+                </form>
                 </li>
                 @auth
                 <li class="nav-item d-flex align-items-center">
@@ -59,17 +59,17 @@
                         <li>
 
                             <a class="position-relative" href="{{route('revisor.index')}}">Zona Revisore
-                            
+
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{App\Models\Announcement::toBeRevisionedCount()}}
-                                
-                                <span class="visually-hidden">Messaggi non letti</span>
-                                
+
+                                    <span class="visually-hidden">Messaggi non letti</span>
+
                                 </span>
 
                             </a>
 
                         </li>
-                            
+
                         @endif
                         <li>
                             <hr class="dropdown-divider">
