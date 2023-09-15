@@ -7,10 +7,20 @@
     @endif
     <header class="container my-5">
         <div class="row">
-            <h1 class="text-center">Compra e Vendi articoli usati</h1>
-            <h2 class="text-center subtitle-header">con un click</h2>
-
+            <div class="col-12">
+                <h1 class="text-center">Compra e Vendi articoli usati</h1>
+                <h2 class="text-center subtitle-header">con un click</h2>
+            </div>
         </div>
+        <div class="row my-4 justify-content-center">
+            <div class="col-8 d-flex justify-content-center">
+                <form class="search w-100">
+                    <input placeholder="Search..." type="text">
+                    <button type="submit">Ricerca</button>
+                </form>
+            </div>
+        </div>
+
     </header>
     <main class="container mt-5">
         <section>

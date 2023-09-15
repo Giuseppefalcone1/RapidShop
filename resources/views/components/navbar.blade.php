@@ -7,6 +7,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                <li class="nav-item">                     
+                    <form class="search w-100">
+                        <input placeholder="Search..." type="text">
+                        <button type="submit">Ricerca</button>
+                    </form>
+                </li>
                 @auth
                 <li class="nav-item d-flex align-items-center">
                     <button class="btn-aggiungi-prodotto">
@@ -78,10 +84,6 @@
                 </li>
                 @endauth
             </ul>
-            <!-- <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
         </div>
     </div>
 </nav>
