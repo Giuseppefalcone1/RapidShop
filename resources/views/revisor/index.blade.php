@@ -13,6 +13,15 @@
             </div>
             @endif
         </div>
+        <form action="{{route('revisor.annul_announcement')}}" method="post">
+            @csrf
+            @method('PATCH')
+            <button class="nav-link" type="submit">
+                 <i class="fa-solid fa-arrow-rotate-left tx-primary fa-2x"></i>
+            </button>
+        </form>
+
+        <p>annulla operazione</p>
         @if ($announcement_to_check)
             <div class="container-fluid">
                 <div class="row justify-content-center">
