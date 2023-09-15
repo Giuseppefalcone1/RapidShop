@@ -5,7 +5,7 @@
             {{ session('message') }}
         </div>
     @endif
-    <header class="container my-5">
+    <header class="container">
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center">Compra e Vendi articoli usati</h1>
@@ -22,6 +22,7 @@
         </div>
 
     </header>
+    <div class="vh-100"></div>
     <main class="container mt-5">
         <section>
             <div class="row">

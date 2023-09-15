@@ -36,3 +36,7 @@ font-family: "PPFragment-SerifRegular";
     background-color: var(--colorPrimary);
   }
   
+  header{
+    margin-top: 150px;
+    margin-bottom: 100px;
+  }

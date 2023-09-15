@@ -1,5 +1,6 @@
 .navbar {
     background-color: var(--colorIce) !important;
+    border-bottom: 2px solid var(--colorPrimary);
 }
 
 /* button registrazione */
