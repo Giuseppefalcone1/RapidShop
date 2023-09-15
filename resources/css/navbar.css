@@ -83,3 +83,18 @@
 .dropdown-custom {
     box-shadow: 5px 5px 15px rgba(17, 175, 157, 0.5);
 }
+
+
+/* Media queries */
+@media(max-width:767px) {
+    .logotipo {
+        display: none;
+    }
+    .logo-container{
+        height: 150%;
+        width: 150%;
+    }
+    .logo {
+        height: 100%;
+    }
+}

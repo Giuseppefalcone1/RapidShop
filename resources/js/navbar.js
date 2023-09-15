@@ -1,9 +1,9 @@
-let navbar = document.querySelector('#navbar');
+let searchBarNavbar = document.querySelector('#searchBar-navbar');
 
 window.addEventListener('scroll', ()=> {
-    if(window.scrollY > 300) {
-        navbar.classList.add("d-none");
+    if(window.scrollY < 300) {
+        searchBarNavbar.classList.add("d-none");
     } else {
-        navbar.classList.remove("d-none");
+        searchBarNavbar.classList.remove("d-none");
     }
 })
