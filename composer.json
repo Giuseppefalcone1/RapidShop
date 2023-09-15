@@ -10,6 +10,7 @@
         "laravel/fortify": "^1.17",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
+        "laravel/scout": "^10.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0"
     },

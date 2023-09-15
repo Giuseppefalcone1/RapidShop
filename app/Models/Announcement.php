@@ -6,13 +6,28 @@ use App\Models\User;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 
 class Announcement extends Model
 {
-    use HasFactory;
+    use HasFactory , Searchable;
 
     protected $fillable = ['name','description','price', 'category_id'];
+      /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
 
+    public function toSearchebleArray(){
+        $array =[
+            'id'=> $this->id,
+            'title'=> $this->title,
+            'description'=>$this->description,
+            "category"=>$this->category
+        ];
+        return $array;
+    }
     public function user(){
         return $this->belongsTo(User::class);
     }

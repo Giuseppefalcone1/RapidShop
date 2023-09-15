@@ -11,7 +11,7 @@
                     <x-card :announcement='$announcement' />
                 </div>
             @empty
-                <h2>NON CI SONO ANCORA ANNUNCI</h2>
+                <h4 class="text-center">La ricerca non ha dato risultati</h4>
             @endforelse
             {{ $announcements->links() }}
         </div>
