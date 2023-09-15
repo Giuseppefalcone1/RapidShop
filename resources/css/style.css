@@ -34,6 +34,11 @@ p, a, button {
     font-family: "PPMori-Regular";
 }
 
+.slot{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
 .font-titoli {
     font-family: "PPFragment-SerifExtraBold";
 }

@@ -22,7 +22,6 @@
         </div>
 
     </header>
-    <div class="vh-100"></div>
     <main class="container mt-5">
         <section>
             <div class="row">

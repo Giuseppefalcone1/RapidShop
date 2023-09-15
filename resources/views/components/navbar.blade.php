@@ -2,17 +2,17 @@
     <div class="container-fluid">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-4 d-flex align-items-center">
+                <div class="col-2 col-md-3 d-flex align-items-center pe-0">
                     <a href="{{ route('welcome') }}" class="logo-container"><img src="/media/logo.svg" alt="RapidShop logo" class="me-2 logo" width="30" height="24"></a>
                     <a class="navbar-brand font-titoli logotipo" href="{{ route('welcome') }}">RapidShop</a>
                 </div>
-                <div class="col-7 d-flex justify-content-center">
-                    <form action="{{ route('announcements.search') }}" method="GET" class="search w-100 d-none mx-5" id="searchBar-navbar">
+                <div class="col-8 col-lg-9 d-flex justify-content-center ps-0">
+                    <form action="{{ route('announcements.search') }}" method="GET" class="search w-100 d-none " id="searchBar-navbar">
                         <input name="searched" placeholder="Cerca..." type="text">
                         <button type="submit"><i class="fa-solid fa-magnifying-glass tx-ice"></i></button>
                     </form>
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-md-1 d-lg-none p-0">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -35,8 +35,8 @@
                     </button>
                 </li>
                 @endauth
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle m-1 text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle m-1 text-black " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-custom">
@@ -63,7 +63,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navbardropdown">
                         {{ Auth::user()->name }}
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-custom">
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-custom w-25 ">
                         @if (Auth::user()->is_revisor)
                         <li>
                             <a class="position-relative" href="{{ route('revisor.index') }}">Zona Revisore
