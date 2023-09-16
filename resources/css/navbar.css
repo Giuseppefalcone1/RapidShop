@@ -84,6 +84,9 @@
     box-shadow: 5px 5px 15px rgba(17, 175, 157, 0.5);
 }
 
+#searchBarHeader{
+    margin-bottom: 34px;
+}
 
 
 /* Media queries */

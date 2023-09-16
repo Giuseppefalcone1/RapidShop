@@ -5,16 +5,16 @@
             {{ session('message') }}
         </div>
     @endif
-    <header class="container">
+    <header class="container" >
         <div class="row">
-            <div class="col-12">
-                <h1 class="text-center">Compra e Vendi articoli usati</h1>
-                <h2 class="text-center subtitle-header">con un click</h2>
+            <div class="col-12 mb-4">
+                <h1 class="text-center" >Compra e Vendi articoli usati</h1>
+                <h2 class="text-center subtitle-header" id="searchBarHeader">con un click</h2>
             </div>
         </div>
-        <div class="row my-4 justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-8 d-flex justify-content-center">
-                <form action="{{ route('announcements.search') }}" method="GET" class="search w-100">
+                <form action="{{ route('announcements.search') }}" method="GET" class="search w-100" >
                     <input name="searched" placeholder="Cerca..." type="text">
                     <button type="submit">Ricerca</button>
                 </form>
@@ -26,7 +26,7 @@
         <section>
             <div class="row">
                 <div class="col-12">
-                    <h3 class="text-center">ULTIMI PRODOTTI</h3>
+                    <h3 class="text-center mt-5">ULTIMI PRODOTTI</h3>
                 </div>
             </div>
             <div class="row">

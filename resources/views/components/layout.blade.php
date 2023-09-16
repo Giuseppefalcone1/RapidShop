@@ -12,7 +12,11 @@
 </head>
 
 <body>
-    <x-navbar/>
+    @if(request()->routeIs('announcement.bycategory'));
+        <x-navbar display='d-none'></x-navbar>
+    @else
+        <x-navbar display='d-block'></x-navbar>
+    @endif
 <div class="min-vh-100 slot">
     {{ $slot }}
 </div>

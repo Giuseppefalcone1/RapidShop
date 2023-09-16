@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top py-4 px-2" id="navbar">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top py-4 px-2" >
     <div class="container-fluid">
         <div class="container-fluid">
             <div class="row">
@@ -7,7 +7,7 @@
                     <a class="navbar-brand font-titoli logotipo" href="{{ route('welcome') }}">RapidShop</a>
                 </div>
                 <div class="col-8 col-lg-9 d-flex justify-content-center ps-0">
-                    <form action="{{ route('announcements.search') }}" method="GET" class="search w-100 d-none " id="searchBar-navbar">
+                    <form action="{{ route('announcements.search') }}" method="GET" class="search w-100 {{$display}}" id="searchBar-navbar" >
                         <input name="searched" placeholder="Cerca..." type="text">
                         <button type="submit"><i class="fa-solid fa-magnifying-glass tx-ice"></i></button>
                     </form>
