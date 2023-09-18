@@ -4,7 +4,7 @@
       <div class="col-12">
         <div class="d-flex align-items-center">
           <i class="fa-solid fa-circle-user m-0 pt-3 ps-3 text-black fa-2x"></i>
-          <p class="m-0 pt-3 px-3">{{ Auth::user()->name }}</p class="m-0 p-4">
+          <p class="m-0 pt-3 px-3">{{ $announcement->user->name }}</p class="m-0 p-4">
         </div>
       </div>
     </div>

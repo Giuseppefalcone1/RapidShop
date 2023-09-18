@@ -36,14 +36,14 @@
                     <form action="{{ route('revisor.accept_announcement', $announcement_to_check) }}" method="post">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn-login">ACCETTA</button>
+                        <button type="submit" class="btn-login fs-5">ACCETTA</button>
                     </form>
                 </div>
                 <div class="col-6 d-flex justify-content-start">
                     <form action="{{ route('revisor.reject_announcement', $announcement_to_check) }}" method="post">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-danger btn-rifiuta">RIFIUTA</button>
+                        <button type="submit" class="btn btn-danger btn-rifiuta fs-5">RIFIUTA</button>
                     </form>
                 </div>
             </div>
