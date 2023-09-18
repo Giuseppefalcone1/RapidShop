@@ -31,7 +31,7 @@
             </div>
             <div class="row">
                 @forelse ($announcements as $announcement)
-                    <div class="col-3 my-3">
+                    <div class="col-12 col-sm-6 my-3">
                         <x-card :announcement='$announcement' />
                     </div>
                 @empty
