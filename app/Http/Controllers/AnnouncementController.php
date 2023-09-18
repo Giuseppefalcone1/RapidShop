@@ -64,11 +64,4 @@ class AnnouncementController extends Controller
     {
         //
     }
-
-    public function bycategory(Category $category){
-
-        $announcements = Announcement::where('is_accepted', true)->find($category);
-        return view('announcements.bycategory' , compact('category', 'announcements'));
-
-    }
 }

@@ -55,6 +55,7 @@
 .dropdown-menu{
     background-color: var(--colorIce) !important;
 }
+
 .dropdown-item:hover{
     background-color: var(--colorPrimary) !important;
     color: var(--colorIce) !important;
@@ -107,11 +108,14 @@
 
 }
 
-@media(max-width:1028px){
-    .navbar-collapse {
+@media(max-width:1290px){
+    .logotipo {
+    display: none;
+}
+}
+
+@media(max-width:990px){
+    .navbar-nav {
         margin-top: 30px;
-        flex-basis: 100%;
-        flex-grow: 1;
-        align-items: center;
-      }
+}
 }

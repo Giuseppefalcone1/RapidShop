@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -16,7 +17,18 @@ class PublicController extends Controller
         return view('announcements.show',compact('announcement'));
     }
 
+    public function bycategory(Category $category){
+        $category = Category::findOrFail($category->id);
+        $announcements = $category->announcements;
+        return view('bycategory' , compact('category', 'announcements'));
+    }
+
     public function searchAnnouncements(Request $request){
+        $category = Category::where('name', $request->searched)->first();
+        if($category) {
+            $announcements = $category->announcements;
+            return view('bycategory', compact('category', 'announcements'));
+        }
         $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(8);
         return view('announcements.index', compact('announcements'));
     }

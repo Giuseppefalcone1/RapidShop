@@ -4,7 +4,7 @@
             <div class="col-12">
                 <h1 class="text-center">AGGIUNGI ANNUNCIO</h1>
             </div>
-            <div class="col-6 d-flex justify-content-center  ">
+            <div class="col-6 d-flex justify-content-center">
                 @if (session('status'))
                     <div class="alert alert-success m-0">
                         {{ session('status') }}
@@ -12,7 +12,7 @@
                 @endif
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <livewire:create-announcement />
         </div>
     </div>
