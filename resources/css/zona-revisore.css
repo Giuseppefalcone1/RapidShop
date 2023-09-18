@@ -1,0 +1,15 @@
+/* button login */
+.btn-revisor {
+    text-align: center;
+    background-color: var(--colorPrimary);
+    border: 2px solid var(--colorPrimary);
+    border-radius: 25px;
+    padding: 0.5rem 0.8rem;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorIce);
+    font-weight: 600;
+    margin: 10px;
+}

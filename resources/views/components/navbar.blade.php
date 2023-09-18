@@ -66,7 +66,7 @@
                     <ul class="dropdown-menu dropdown-menu-end dropdown-custom w-25 ">
                         @if (Auth::user()->is_revisor)
                         <li>
-                            <a class="position-relative" href="{{ route('revisor.index') }}">Zona Revisore
+                            <a class="position-relative text-decoration-none btn-revisor" href="{{ route('revisor.index') }}">Zona Revisore
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ App\Models\Announcement::toBeRevisionedCount() }}
                                     <span class="visually-hidden">Messaggi non letti</span>
                                 </span>

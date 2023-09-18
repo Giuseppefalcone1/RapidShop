@@ -2,7 +2,7 @@
 
     <div class="container-register mx-auto">
         <div class="heading">Login</div>
-        <form action="{{ route('register') }}" class="form" method="post">
+        <form action="{{ route('login') }}" class="form" method="post">
             @csrf
             <div class="row">
                 <div class="col-6">

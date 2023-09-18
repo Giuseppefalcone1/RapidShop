@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-2">
     <div class="row justify-content-center">
         <div class="col-4">
             <div class="card rounded-4">
@@ -38,9 +38,9 @@
                             <p>{{ $announcement->price }}</p>
                         </div>
                     </div>
-                    <a href="#" class="nav-link">{{ $announcement->category->name }}</a>
+                    <a href="#" class="nav-link mb-3">{{ $announcement->category->name }}</a>
                     <div class="card-footer">
-                        <p>data di pubblicazione: {{ $announcement->created_at->format('d/m/y') }}</p>
+                        <p class="text-center my-auto">data di pubblicazione: {{ $announcement->created_at->format('d/m/y') }}</p>
                     </div>
                 </div>
             </div>

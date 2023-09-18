@@ -13,29 +13,30 @@
             </div>
             @endif
         </div>
-        <form action="{{route('revisor.annul_announcement')}}" method="post">
+        <form action="{{route('revisor.annul_announcement')}}" method="post" class="">
             @csrf
             @method('PATCH')
-            <button class="nav-link" type="submit">
+            <button class="nav-link mx-auto mt-4" type="submit">
                  <i class="fa-solid fa-arrow-rotate-left tx-primary fa-2x"></i>
             </button>
         </form>
 
-        <p>annulla operazione</p>
+        <p class="text-center">annulla operazione</p>
+
         @if ($announcement_to_check)
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <x-cardShow :announcement='$announcement_to_check' />
                 </div>
                 <div class="row my-2 w-50 mx-auto">
-                    <div class="col-6 d-flex justify-content-center">
+                    <div class="col-6 d-flex justify-content-end">
                         <form action="{{ route('revisor.accept_announcement', $announcement_to_check) }}" method="post">
                             @csrf
                             @method('PATCH')
                             <button type="submit" class="btn btn-success">ACCETTA</button>
                         </form>
                     </div>
-                    <div class="col-6 d-flex justify-content-center">
+                    <div class="col-6 d-flex justify-content-start">
                         <form action="{{ route('revisor.reject_announcement', $announcement_to_check) }}" method="post">
                             @csrf
                             @method('PATCH')
