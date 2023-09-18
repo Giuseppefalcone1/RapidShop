@@ -1,46 +1,22 @@
-<!-- <div class="card">
+<a href="{{ route('announcement.show', $announcement) }}" class="text-decoration-none text-black">
+  <div class="card card-custom rounded-4">
     <div class="row">
-        <div class="col-8">
-            <img src="https://picsum.photos/300" class="card-img-top" alt="...">
-        </div>
-        <div class="col-8">
-            <div class="card-body">
-                <h5 class="card-title">{{ $announcement->name }}</h5>
-                <p class="card-text">{{ $announcement->description }}</p>
-                <div class="row">
-                    <div class="col-6">
-                        <p>{{ $announcement->price }}</p>
-                    </div>
-                    <div class="col-6">
-                        <a href="{{ route('announcement.show', $announcement) }}" class="btn btn-primary">Dettagli</a>
-                    </div>
-                </div>
-                <a href="{{route('announcement.bycategory', $announcement->category )}}" class="nav-link">{{ $announcement->category->name }}</a>
-                <div class="card-footer">
-                    <p>data di pubblicazione: {{ $announcement->created_at->format('d/m/y') }}</p>
-                </div>
-            </div>
-        </div>
+      <div class="col-12">
+        <img src="https://picsum.photos/300" class="card-img-top p-2 rounded-4" alt="{{ $announcement->name }}">
+      </div>
     </div>
-</div> -->
-
-<div class="card">
-  <div class="card-img">
-    <img src="https://picsum.photos/300" class="card-img-top" alt="...">
+    <div class="row">
+      <div class="col-12">
+        <div class="card-body">
+          <h5 class="card-title">{{ $announcement->name }}</h5>
+          <div class="row">
+            <div class="col-12">
+              <p>{{ $announcement->price }} €</p>
+            </div>
+          </div>
+          <a href="{{route('announcement.bycategory', $announcement->category )}}" class="tx-primary">{{ $announcement->category->name }}</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="card-info">
-    <p class="text-title">{{ $announcement->name }}</p>
-    <p class="text-body">{{ $announcement->description }}</p>
-  </div>
-  <div class="col-6">
-    <p>{{ $announcement->price }}</p>
-  </div>
-  <div class="col-6">
-    <a href="{{ route('announcement.show', $announcement) }}" class="btn btn-primary">Dettagli</a>
-  </div>
-  <a href="{{route('announcement.bycategory', $announcement->category )}}" class="nav-link">{{ $announcement->category->name }}</a>
-  <div class="card-footer">
-    <p>data di pubblicazione: {{ $announcement->created_at->format('d/m/y') }}</p>
-  </div>
-  <div class="card-button">
-  </div>
+</a>

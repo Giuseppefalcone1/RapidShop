@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">TUTTI I PRODOTTI</h1>
+                <h1 class="text-center mb-5">TUTTI I PRODOTTI</h1>
             </div>
         </div>
         <div class="row">

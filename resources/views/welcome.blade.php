@@ -26,12 +26,12 @@
         <section>
             <div class="row">
                 <div class="col-12">
-                    <h3 class="text-center mt-5">ULTIMI PRODOTTI</h3>
+                    <h3 class="text-center my-5">ULTIMI PRODOTTI</h3>
                 </div>
             </div>
             <div class="row">
                 @forelse ($announcements as $announcement)
-                    <div class="col-12 col-sm-6 my-3">
+                    <div class="col-12 col-sm-6 col-md-3 my-3">
                         <x-card :announcement='$announcement' />
                     </div>
                 @empty
