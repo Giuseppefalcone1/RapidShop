@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
     public function home(){
-        $announcements = Announcement::take(6)->where('is_accepted', true)->orderBy('created_at','desc')->get();
+        $announcements = Announcement::take(4)->where('is_accepted', true)->orderBy('created_at','desc')->get();
         return view('welcome',compact('announcements'));
     }
 

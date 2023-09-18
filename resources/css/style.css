@@ -1,7 +1,7 @@
 :root{
     --colorPrimary : rgb(19, 193, 172);
     --colorSecondary : rgb(255, 164, 36);
-    --colorIce : #E5EBEA;
+    --colorIce : rgb(229, 235, 234);
 }
 
 @font-face {
