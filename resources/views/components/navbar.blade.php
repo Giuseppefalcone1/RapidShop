@@ -79,7 +79,7 @@
                         <li>
                             <form class="w-100" action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button class="nav-link text-decoration-underline tx-secondary logout-link ps-2">Logout</button>
+                                <button class="nav-link text-decoration-underline tx-secondary logout-link ps-3">Logout</button>
                             </form>
                         </li>
                     </ul>

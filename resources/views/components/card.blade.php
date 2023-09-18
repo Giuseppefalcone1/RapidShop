@@ -2,6 +2,11 @@
   <div class="card card-custom rounded-4">
     <div class="row">
       <div class="col-12">
+        <p class="m-0 pt-3 px-3">Pubblicato da: {{ Auth::user()->name }}</p class="m-0 p-4">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
         <img src="https://picsum.photos/300" class="card-img-top p-2 rounded-4" alt="{{ $announcement->name }}">
       </div>
     </div>

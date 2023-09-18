@@ -13,3 +13,25 @@
     font-weight: 600;
     margin: 10px;
 }
+
+.btn-rifiuta {
+    text-align: center;
+    /* background-color: var(--colorSecondary); */
+    border: 2px solid #dc3545;
+    border-radius: 25px;
+    padding: 0.5rem 0.8rem;
+    transition: all ease-in-out 0.2s;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorIce);
+    font-weight: 600;
+    width: 120px;
+}
+
+.btn-rifiuta:hover {
+    /* background-color: rgb(188, 121, 27);
+    border: 2px solid rgb(188, 121, 27); */
+    color: var(--colorIce);
+}
