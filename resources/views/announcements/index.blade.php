@@ -7,9 +7,9 @@
         </div>
         <div class="row">
             @forelse ($announcements as $announcement)
-                <div class="col-3 my-3">
-                    <x-card :announcement='$announcement' />
-                </div>
+            <div class="col-12 col-sm-6 col-md-3 my-3">
+                <x-card :announcement='$announcement' />
+            </div>
             @empty
                 <h4 class="text-center">La ricerca non ha dato risultati</h4>
             @endforelse

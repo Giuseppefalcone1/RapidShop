@@ -24,16 +24,16 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $categories = [
-            'Casa e Giardino', 
-            'Console e Videogiochi', 
-            'Cinema Libri e Musica', 
-            'Sport e Tempo Libero', 
-            'Telefonia e Accessori' . 
-            'Informatica e Elettronica', 
-            'TV, Audio e Fotocamere', 
-            'Collezionismo', 
-            'Moda e Accessori', 
-            'Auto e Moto', 
+            'Casa e Giardino',
+            'Console e Videogiochi',
+            'Cinema Libri e Musica',
+            'Sport e Tempo Libero',
+            'Telefonia e Accessori',
+            'Informatica e Elettronica',
+            'TV, Audio e Fotocamere',
+            'Collezionismo',
+            'Moda e Accessori',
+            'Auto e Moto',
             'Elettrodomestici'
         ];
 

@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-12">
         <div class="card-body">
-          <h5 class="card-title">{{ $announcement->name }}</h5>
+          <h5 class="card-title text-truncate">{{ $announcement->name }}</h5>
           <div class="row">
             <div class="col-12">
               <p>{{ $announcement->price }} €</p>
