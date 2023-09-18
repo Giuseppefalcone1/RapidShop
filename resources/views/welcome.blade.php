@@ -1,7 +1,7 @@
 <x-layout title="rapidshop homepage">
 
     @if (session('message'))
-        <div class="alert alert-success m-0">
+        <div class="alert alert-success m-0 position-absolute success-message w-100">
             {{ session('message') }}
         </div>
     @endif

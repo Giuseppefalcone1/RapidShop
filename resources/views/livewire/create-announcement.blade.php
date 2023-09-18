@@ -12,7 +12,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Categoria</label>
-            <select wire:model="category_id" class="form-select">
+            <select wire:model="category_id" class="form-select" onfocus="this.size=8;" onblur="this.size=0;" onchange="this.size=1; this.blur()">
                 <option value="" class="option-custom">-- seleziona una categoria --</option>
                 @foreach($categories as $category)
                 <option value="{{ $category->id }}" class="text-black option-custom">{{ $category->name }}</option>

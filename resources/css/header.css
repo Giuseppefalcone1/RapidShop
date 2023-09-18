@@ -35,3 +35,7 @@ font-family: "PPFragment-SerifRegular";
     color: rgb(255, 255, 255);
     background-color: var(--colorPrimary);
   }
+
+  .success-message{
+    top: 100px;
+  }
