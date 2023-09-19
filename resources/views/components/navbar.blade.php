@@ -21,6 +21,22 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle m-1 text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <x-_locale lang='it'/>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-custom">
+                            <li class="nav-item">
+                                <x-_locale lang='it'/>
+                            </li>
+                            <li class="nav-item">
+                                <x-_locale lang='en'/>
+                            </li>
+                            <li class="nav-item">
+                                <x-_locale lang='es'/>
+                            </li>
+                        </ul>
+                    </li>
                 @auth
                 <li class="nav-item d-flex align-items-center">
                     <button class="btn-aggiungi-prodotto">
@@ -89,3 +105,4 @@
         </div>
     </div>
 </nav>
+

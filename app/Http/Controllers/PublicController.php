@@ -32,4 +32,10 @@ class PublicController extends Controller
         $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(8);
         return view('announcements.index', compact('announcements'));
     }
+
+    public function setLanguage($lang){
+        session()->put('locale', $lang);
+
+        return redirect()->back();
+    }
 }

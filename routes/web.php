@@ -11,6 +11,7 @@ Route::get('/announcement/show/{announcement}',[PublicController::class, 'show']
 Route::get('/announcement/index', [AnnouncementController::class, 'index'])->name('announcement.index');
 Route::get('/announcement/bycategory/{category}',[PublicController::class, 'bycategory'])->name('announcement.bycategory');
 Route::get('ricerca/annuncio',[PublicController::class,'searchAnnouncements'])->name('announcements.search');
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');
 
 // rotte private
 Route::middleware(['auth'])->group(function(){
