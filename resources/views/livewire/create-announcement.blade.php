@@ -1,5 +1,5 @@
 <div class="card add-product">
-    <form class="container my-5" wire:submit.prevent="store" enctype="multipart/form-data">
+    <form class="container my-5" wire:submit.prevent="store">
         <div class="mb-3">
             <label class="form-label">Nome prodotto</label>
             <input wire:model="name" type="text" class="form-control">
@@ -29,6 +29,24 @@
             <input wire:model="price" type="number" class="form-control">
             <div class="text-danger">@error('price') {{ $message }} @enderror</div>
         </div>
+        @if(!empty($images))
+            <div class="row">
+                <div class="col-12">
+                    <p>Anteprima foto:</p>
+                    <div class="row border border-4 border-info rounded shadow py-4">
+                        @foreach ($images as $key => $image)
+
+                            <div class="col my-3">
+
+                                <div class="img-preview mx-auto shadow rounded" style="background-image:url({{$image->temporaryUrl()}})"></div>
+                                <button class="btn btn-danger d-block text-center mt-2 mx-auto" type="button" wire:click="removeImage({{$key}})">Cancella</button>
+                            </div>
+                            
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endif
         <button type="submit" class="btn-login">Aggiungi</button>
     </form>
 </div>
