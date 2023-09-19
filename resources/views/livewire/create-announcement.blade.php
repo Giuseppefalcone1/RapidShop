@@ -1,5 +1,5 @@
 <div class="card add-product">
-    <form class="container my-5" wire:submit.prevent="store">
+    <form class="container my-5" wire:submit.prevent="store" enctype="multipart/form-data">
         <div class="mb-3">
             <label class="form-label">Nome prodotto</label>
             <input wire:model="name" type="text" class="form-control">
@@ -19,6 +19,10 @@
                 @endforeach
             </select>
             <div class="text-danger">@error('category_id') {{ $message }} @enderror</div>
+        </div>
+        <div class="mb-3">
+            <input wire:model="temporary_images" type="file" name="images" class="form-control" multiple>
+            <div class="text-danger">@error('temporary_images.*') {{ $message }} @enderror</div>
         </div>
         <div class="mb-3">
             <label class="form-label">Prezzo</label>

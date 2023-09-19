@@ -4,20 +4,28 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Announcement;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
 class CreateAnnouncement extends Component
 {
+
+    use WithFileUploads;
+
     public $name;
     public $description;
     public $price;
     public $category_id;
+    public $images = [];
+    public $temporary_images;
 
     protected $rules = [
         'name' => 'required',
         'description' => 'required|min:10',
         'price' => 'required|numeric|max:99999',
         'category_id' => 'required',
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024'
     ];
 
     protected $messages = [
@@ -28,7 +36,11 @@ class CreateAnnouncement extends Component
         'price.required' => 'Il campo Prezzo è obbligatorio',
         'price.numeric' => 'Il campo Prezzo deve contenere solo numeri',
         'price.max' => 'Max: 99.999',
-        'category_id.required' => "Il campo Categoria è obbligatorio"
+        'category_id.required' => "Il campo Categoria è obbligatorio",
+        'images.image' => 'Il file dev\'essere di tipo immagine',
+        'images.max' => 'Il file dev\'essere massimo 1mb',
+        'temporary_images.*.image' => 'I file devono essere immagini',
+        'temporary_images.*.max' => 'Il file dev\'essere massimo 1mb'
 
     ];
 

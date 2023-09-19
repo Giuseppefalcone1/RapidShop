@@ -90,13 +90,13 @@
                         <x-_locale lang='it' />
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-custom">
-                        <li class="nav-item d-flex align-items-center justify-content-center">
+                        <li class="nav-item d-flex align-items-center justify-content-start ps-2">
                             <x-_locale lang='it' /> ITALIANO
                         </li>
-                        <li class="nav-item d-flex align-items-center justify-content-center">
+                        <li class="nav-item d-flex align-items-center justify-content-start ps-2">
                             <x-_locale lang='en' /> ENGLISH
                         </li>
-                        <li class="nav-item d-flex align-items-center justify-content-center">
+                        <li class="nav-item d-flex align-items-center justify-content-start ps-2">
                             <x-_locale lang='es' /> ESPANOL
                         </li>
                     </ul>
