@@ -1,7 +1,7 @@
             <div class="card rounded-4">
                 <div class="row">
                     <div class="col-12">
-                        <p class="m-0 pt-3 px-3">Pubblicato da: {{ Auth::user()->name }}</p class="m-0 p-4">
+                        <p class="m-0 p-3">Pubblicato da: {{$announcement->user->name}}</p class="m-0 p-4">
                     </div>
                 </div>
                 <!-- inizio carosello -->

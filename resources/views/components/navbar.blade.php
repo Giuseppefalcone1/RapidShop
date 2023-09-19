@@ -2,18 +2,18 @@
     <div class="container-fluid">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-2 col-md-3 d-flex align-items-center pe-0">
+                <div class="col-2 col-md-1 col-lg-3 d-flex align-items-center pe-0">
                     <a href="{{ route('welcome') }}" class="logo-container"><img src="/media/logo.svg" alt="RapidShop logo" class="me-2 logo" width="30" height="24"></a>
                     <a class="navbar-brand font-titoli logotipo" href="{{ route('welcome') }}">RapidShop</a>
                 </div>
-                <div class="col-8 col-lg-9 d-flex justify-content-center ps-0">
+                <div class="col-8 col-md-9 col-lg-8 mx-auto d-flex justify-content-center ps-0">
                     <form action="{{ route('announcements.search') }}" method="GET" class="search w-100 {{$display}}" id="searchBar-navbar">
                         <input name="searched" placeholder="Cerca..." type="text">
                         <button type="submit"><i class="fa-solid fa-magnifying-glass tx-ice"></i></button>
                     </form>
                 </div>
-                <div class="col-2 col-md-1 d-lg-none p-0">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="col-2 d-lg-none p-0 d-flex justify-content-center ">
+                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>

@@ -8,14 +8,14 @@
     <header class="container" >
         <div class="row">
             <div class="col-12 mb-4">
-                <h1 class="text-center" >Compra e Vendi articoli usati</h1>
-                <h2 class="text-center subtitle-header" id="searchBarHeader">con un click</h2>
+                <h1 class="text-center" >{{__('ui.headerTitle')}}</h1>
+                <h2 class="text-center subtitle-header" id="searchBarHeader">{{__('ui.headerSub')}}</h2>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-8 d-flex justify-content-center">
                 <form action="{{ route('announcements.search') }}" method="GET" class="search w-100" >
-                    <input name="searched" placeholder="Cerca..." type="text">
+                    <input name="searched" placeholder="{{__('ui.searchPlaceholder')}}" type="text">
                     <button type="submit">Ricerca</button>
                 </form>
             </div>
@@ -26,7 +26,7 @@
         <section>
             <div class="row">
                 <div class="col-12">
-                    <h3 class="text-center my-5">ULTIMI PRODOTTI</h3>
+                    <h3 class="text-center my-5">{{__('ui.lastProducts')}}</h3>
                 </div>
             </div>
             <div class="row">
