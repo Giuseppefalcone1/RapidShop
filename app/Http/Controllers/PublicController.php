@@ -30,6 +30,7 @@ class PublicController extends Controller
             return view('bycategory', compact('category', 'announcements'));
         }
         $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(8);
+        $announcements->appends(['searched' => $request->searched]);
         return view('announcements.index', compact('announcements'));
     }
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top py-4 px-2" >
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top py-4 px-2">
     <div class="container-fluid">
         <div class="container-fluid">
             <div class="row">
@@ -7,7 +7,7 @@
                     <a class="navbar-brand font-titoli logotipo" href="{{ route('welcome') }}">RapidShop</a>
                 </div>
                 <div class="col-8 col-lg-9 d-flex justify-content-center ps-0">
-                    <form action="{{ route('announcements.search') }}" method="GET" class="search w-100 {{$display}}" id="searchBar-navbar" >
+                    <form action="{{ route('announcements.search') }}" method="GET" class="search w-100 {{$display}}" id="searchBar-navbar">
                         <input name="searched" placeholder="Cerca..." type="text">
                         <button type="submit"><i class="fa-solid fa-magnifying-glass tx-ice"></i></button>
                     </form>
@@ -20,23 +20,7 @@
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-                <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle m-1 text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <x-_locale lang='it'/>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-custom">
-                            <li class="nav-item">
-                                <x-_locale lang='it'/>
-                            </li>
-                            <li class="nav-item">
-                                <x-_locale lang='en'/>
-                            </li>
-                            <li class="nav-item">
-                                <x-_locale lang='es'/>
-                            </li>
-                        </ul>
-                    </li>
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto d-flex align-items-lg-center">
                 @auth
                 <li class="nav-item d-flex align-items-center">
                     <button class="btn-aggiungi-prodotto">
@@ -76,7 +60,7 @@
                 @endguest
                 @auth
                 <li class="nav-item dropdown my-auto">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navbardropdown">
+                    <a class="nav-link dropdown-toggle ps-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navbardropdown">
                         {{ Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-custom w-25 ">
@@ -101,8 +85,23 @@
                     </ul>
                 </li>
                 @endauth
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-black m-0 p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <x-_locale lang='it' />
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-custom">
+                        <li class="nav-item d-flex align-items-center justify-content-center">
+                            <x-_locale lang='it' /> ITALIANO
+                        </li>
+                        <li class="nav-item d-flex align-items-center justify-content-center">
+                            <x-_locale lang='en' /> ENGLISH
+                        </li>
+                        <li class="nav-item d-flex align-items-center justify-content-center">
+                            <x-_locale lang='es' /> ESPANOL
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
-

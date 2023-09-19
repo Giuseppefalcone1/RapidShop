@@ -5,14 +5,12 @@
                 <h1 class="text-center">
                     {{ $announcement_to_check ? 'Annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
                 </h1>
+                @if (session('message'))
+                <div class="alert alert-success m-0 mx-auto w-50">
+                    {{ session('message') }}
+                </div>
+                @endif
             </div>
-        </div>
-        <div class="row">
-            @if (session('message'))
-            <div class="alert alert-success m-0">
-                {{ session('message') }}
-            </div>
-            @endif
         </div>
         <form action="{{route('revisor.annul_announcement')}}" method="post" class="d-flex justify-content-center">
             @csrf
