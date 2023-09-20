@@ -50,6 +50,15 @@ return [
     'coverLetter' => 'envíanos tu carta de presentación',
     'response' => 'nos pondremos en contacto con usted tan pronto como sea posible',
     'send' => 'Enviar',
+    'annuncio-revisore' => 'Anuncio para ser revisado',
+    'no-announcements' => 'No hay anuncios para revisar',
+    'cancel-operation' => 'Cancelar operación',
+    'ACCETTA' => 'Aceptar',
+    'RIFIUTA' => 'Rechazar',
+
+    //byCategory
+    'category-explore' => 'Explorar la categoría',
+    'no-announcement-category' => 'Aún no hay anuncios para esta categoría'
 
 
 

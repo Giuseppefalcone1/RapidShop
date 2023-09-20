@@ -2,7 +2,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">Esplora la categoria '{{ strtoupper($category->name) }}'</h1>
+                <h1 class="text-center">{{__("ui.category-explore")}} '{{ strtoupper(__("category.{$category->name}") )}}'</h1>
             </div>
         </div>
         <div class="row">
@@ -11,7 +11,7 @@
                 <x-card :announcement='$announcement' />
             </div>
             @empty
-            <p class="text-center my-4">Non ci sono ancora annunci per questa categoria</p>
+            <p class="text-center my-4">{{__("ui.no-announcement-category")}}</p>
         </div>
         <div class="row justify-content-center">
             <div class="col-3 d-flex">
@@ -21,8 +21,7 @@
                             <path fill="none" d="M0 0h24v24H0z"></path>
                             <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
                         </svg>
-                        <a href="{{ route('announcement.create') }}" class="nav-link text-nowrap p-0">Aggiungi
-                            annuncio</a>
+                        <a href="{{ route('announcement.create') }}" class="nav-link text-nowrap p-0">{{ __('ui.addProduct') }}</a>
                     </span>
                 </button>
             </div>

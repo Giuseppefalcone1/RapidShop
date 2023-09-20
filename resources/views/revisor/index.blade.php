@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center">
-                    {{ $announcement_to_check ? 'Annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
+                    {{ $announcement_to_check ? __("ui.annuncio-revisore") : __("ui.no-announcements") }}
                 </h1>
                 @if (session('message'))
                 <div class="alert alert-success m-0 mx-auto w-50">
@@ -16,7 +16,7 @@
             @csrf
             @method('PATCH')
             <button class="btn btn-danger mx-auto mt-4" type="submit">
-                <p class="text-center my-1">Annulla operazione</p>
+                <p class="text-center my-1">{{__("ui.cancel-operation")}}</p>
                 <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
             </button>
         </form>
@@ -34,14 +34,14 @@
                     <form action="{{ route('revisor.accept_announcement', $announcement_to_check) }}" method="post">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn-login fs-5">ACCETTA</button>
+                        <button type="submit" class="btn-login fs-5">{{__("ui.ACCETTA")}}</button>
                     </form>
                 </div>
                 <div class="col-6 d-flex justify-content-start">
                     <form action="{{ route('revisor.reject_announcement', $announcement_to_check) }}" method="post">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-danger btn-rifiuta fs-5">RIFIUTA</button>
+                        <button type="submit" class="btn btn-danger btn-rifiuta fs-5">{{__("ui.RIFIUTA")}}</button>
                     </form>
                 </div>
             </div>

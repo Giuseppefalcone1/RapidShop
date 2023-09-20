@@ -51,6 +51,15 @@ return [
     'coverLetter' => 'inviaci la tua cover letter',
     'response' => 'ti contatteremo il prima possibile',
     'send' => 'Invia',
+    'annuncio-revisore' => 'Annuncio da revisionare',
+    'no-announcements' => 'Non ci sono annunci da revisionare',
+    'cancel-operation' => 'Annulla operazione',
+    'ACCETTA' => 'Accetta',
+    'RIFIUTA' => 'Rifiuta',
+
+    //byCategory
+    'category-explore' => 'Esplora la categoria',
+    'no-announcement-category' => 'Non ci sono ancora annunci per questa categoria'
 
 
 ];
