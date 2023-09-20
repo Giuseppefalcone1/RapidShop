@@ -8,6 +8,7 @@ use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class CreateAnnouncement extends Component
 {
@@ -85,6 +86,8 @@ class CreateAnnouncement extends Component
 
                 dispatch(new ResizeImage($newImage->path , 300 , 300));
             }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         session()->flash('status', 'Il tuo annuncio è stato inserito correttamente!');
         $this->redirect('/announcement/create');
