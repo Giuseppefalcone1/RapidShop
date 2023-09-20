@@ -47,7 +47,7 @@
                     <ul class="dropdown-menu dropdown-menu-end dropdown-custom">
                         @foreach ($categories as $category)
                             <li><a class="dropdown-item"
-                                    href="{{ route('announcement.bycategory', $category) }}">{{ $category->name }}</a>
+                                    href="{{ route('announcement.bycategory', $category) }}">{{ __("category.{$category->name}")}}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -98,7 +98,13 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-black m-0 p-0" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <x-_locale lang='it' />
+                        @if(Config::get('app.locale')=='en')
+                            <x-_locale lang='en' />
+                        @elseif(Config::get('app.locale')=='es')
+                            <x-_locale lang='es' />
+                        @else
+                            <x-_locale lang='it' />
+                        @endif
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-custom">
                         <li class="nav-item d-flex align-items-center justify-content-start ps-2">
