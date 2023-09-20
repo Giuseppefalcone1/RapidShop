@@ -2,7 +2,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="text-center">AGGIUNGI ANNUNCIO</h1>
+                <h1 class="text-center">{{ __('ui.AddProduct') }}</h1>
             </div>
             <div class="col-6 d-flex justify-content-center">
                 @if (session('status'))

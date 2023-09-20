@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center mb-5">TUTTI I PRODOTTI</h1>
+                <h1 class="text-center mb-5">{{__('ui.AllProducts')}}</h1>
             </div>
         </div>
         <div class="row">
@@ -11,7 +11,7 @@
                     <x-card :announcement='$announcement' />
                 </div>
             @empty
-                <h4 class="text-center">La ricerca non ha dato risultati</h4>
+                <h4 class="text-center">{{__('ui.noResult')}}</h4>
             @endforelse
             <div class="mt-4">
                 {{ $announcements->links() }}

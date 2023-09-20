@@ -1,7 +1,7 @@
 <div class="card rounded-4">
     <div class="row">
         <div class="col-12">
-            <p class="m-0 p-3">Pubblicato da: {{ $announcement->user->name }}</p>
+            <p class="m-0 p-3">{{__('ui.publishedBy')}}: {{ $announcement->user->name }}</p>
         </div>
     </div>
     <!-- Inizio carosello -->
@@ -60,12 +60,12 @@
         <p class="card-text">{{ $announcement->description }}</p>
         <div class="row">
             <div class="col-6">
-                <p>{{ $announcement->price }}</p>
+                <p>{{ $announcement->price }} €</p>
             </div>
         </div>
-        <a href="#" class="nav-link mb-3">{{ $announcement->category->name }}</a>
+        <a href="#" class="nav-link mb-3">{{ __("category.{$announcement->category->name}")  }}</a>
     </div>
     <div class="card-footer">
-        <p class="text-center my-auto">Data di pubblicazione: {{ $announcement->created_at->format('d/m/y') }}</p>
+        <p class="text-center my-auto">{{__('ui.dateOfPublishment')}} : {{ $announcement->created_at->format('d/m/y') }}</p>
     </div>
 </div>

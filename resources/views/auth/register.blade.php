@@ -1,13 +1,13 @@
 <x-layout>
 
     <div class="container-register mx-auto">
-        <div class="heading">Registrati</div>
+        <div class="heading">{{__('ui.register')}} </div>
         <form action="{{ route('register') }}" class="form" method="post">
             @csrf
             <div class="row">
                 <div class="col-6">
                     <input required="" class="input" type="text" name="name" id="email"
-                        placeholder="nome completo">
+                        placeholder="{{__('ui.name')}}">
                     @error('name')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
@@ -30,17 +30,17 @@
                 </div>
                 <div class="col-6">
                     <input required="" class="input" type="password" name="password_confirmation" id="password"
-                        placeholder="Conferma password">
+                        placeholder="{{__('ui.confirmPassword')}}">
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <input class="login-button" type="submit" value="Registrati">
+                    <input class="login-button" type="submit" value="{{__('ui.register')}}">
                 </div>
             </div>
             <div class="row pt-3">
                 <div class="col-12">
-                    Hai già un account? <a href="{{route('login')}}" class="tx-primary">Accedi</a>
+                    {{__('ui.doYouHaveAnAccount')}} <a href="{{route('login')}}" class="tx-primary">Login</a>
                 </div>
             </div>
         </form>

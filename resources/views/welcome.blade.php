@@ -35,7 +35,7 @@
                         <x-card :announcement='$announcement' />
                     </div>
                 @empty
-                    <h2 class="text-center">NON CI SONO ANCORA ANNUNCI</h2>
+                    <h2 class="text-center">{{__('ui.noProduct')}}</h2>
                 @endforelse
             </div>
         </section>

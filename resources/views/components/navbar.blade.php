@@ -58,7 +58,7 @@
                 </li>
                 @guest
                     <li class="nav-item">
-                        <a class="btn-registrazione btn m-1" href="{{ route('register') }}">Registrati</a>
+                        <a class="btn-registrazione btn m-1" href="{{ route('register') }}">{{__('ui.register')}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn-login btn m-1" href="{{ route('login') }}">Login</a>

@@ -27,7 +27,7 @@
             </div>
             <div class="row pt-3">
                 <div class="col-12">
-                    Non hai un account? <a href="{{route('register')}}" class="tx-primary">Registrati</a>
+                    {{__('ui.dontHaveAccount')}} <a href="{{route('register')}}" class="tx-primary">{{__('ui.register')}}</a>
                 </div>
             </div>
         </form>

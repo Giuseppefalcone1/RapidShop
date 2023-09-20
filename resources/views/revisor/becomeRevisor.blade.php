@@ -9,7 +9,7 @@
         </div>
         <div class="row mb-5">
             <div class="col-12">
-                <h1 class="text-center">VUOI DIVENTARE REVISORE?</h1>
+                <h1 class="text-center">{{__("ui.BecomeRevisor")}}</h1>
             </div>
         </div>
 
@@ -18,8 +18,8 @@
                 <form action="{{ route('become.revisor', Auth::user()) }}" method="get">
                     @csrf
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label"><h4 class="">Inviaci la tua cover letter</h4>
-                            <p class="m-0">ti contatteremo il prima possibile</p></label>
+                        <label for="exampleInputPassword1" class="form-label"><h4 class="">{{__("ui.coverLetter")}}</h4>
+                            <p class="m-0">{{__('ui.response')}}</p></label>
                         <textarea name="coverLetter" class="form-control" id="" cols="20" rows="10"></textarea>
                         <div class="text-danger">
                             @error('coverLetter')
@@ -27,7 +27,7 @@
                             @enderror
                         </div>
                     </div>
-                    <button type="submit" class="btn-login">Invia</button>
+                    <button type="submit" class="btn-login">{{__("ui.send")}}</button>
                 </form>
             </div>
         </div>

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Jobs;
-
 use Spatie\Image\Image;
 use Illuminate\Bus\Queueable;
 use Spatie\Image\Manipulations;
@@ -22,7 +21,7 @@ class ResizeImage implements ShouldQueue
 
     /**
      * Create a new job instance.
-     * 
+     *
      */
     public function __construct($filePath, $w, $h)
     {

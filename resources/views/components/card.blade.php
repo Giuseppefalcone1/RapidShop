@@ -22,7 +22,7 @@
               <p>{{ $announcement->price }} €</p>
             </div>
           </div>
-          <a href="{{route('announcement.bycategory', $announcement->category )}}" class="tx-primary">{{ $announcement->category->name }}</a>
+          <a href="{{route('announcement.bycategory', $announcement->category )}}" class="tx-primary">{{ __("category.{$announcement->category->name}")  }}</a>
         </div>
       </div>
     </div>
