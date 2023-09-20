@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    @if(request()->routeIs('announcement.bycategory'));
+    @if(request()->routeIs('announcement.bycategory') || request()->routeIs('welcome'));
         <x-navbar display='d-none'></x-navbar>
     @else
         <x-navbar display='d-block'></x-navbar>

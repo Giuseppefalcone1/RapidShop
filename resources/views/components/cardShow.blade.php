@@ -5,12 +5,20 @@
                     </div>
                 </div>
                 <!-- inizio carosello -->
-                <div id="carouselExampleIndicators" class="carousel slide">
+                <div id="carouselExampleIndicators" class="carousel slide" >
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
+                    @if ( count($announcement->images))
+                    <div class="carousel-inner">
+                        @foreach ($announcement->images as $image)
+                        <div class="carousel-item @if($loop->first)active @endif">
+                            <img src="{{Storage::url($image->path)}}" alt="" class="d-block w-100 rounded-4 img-fluid p-2">
+                        </div>
+                        @endforeach
+                    @else
                     <div class="carousel-inner p-2">
                         <div class="carousel-item active">
                             <img src="https://picsum.photos/300" class="d-block w-100 rounded-4 img-fluid p-2" alt="">
@@ -31,6 +39,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+                @endif
                 <!-- fine carosello -->
                 <div class="card-body">
                     <h5 class="card-title">{{ $announcement->name }}</h5>

@@ -14,7 +14,7 @@ class Image extends Model
         'path'
     ];
 
-    public function announcements(){
+    public function announcement(){
         return $this->belongsTo(Announcement::class);
     }
 }

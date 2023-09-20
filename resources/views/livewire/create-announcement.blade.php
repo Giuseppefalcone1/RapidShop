@@ -21,27 +21,24 @@
             <div class="text-danger">@error('category_id') {{ $message }} @enderror</div>
         </div>
         <div class="mb-3">
-            <input wire:model="temporary_images" type="file" name="images" class="form-control" multiple>
-            <div class="text-danger">@error('temporary_images.*') {{ $message }} @enderror</div>
-        </div>
-        <div class="mb-3">
             <label class="form-label">Prezzo</label>
             <input wire:model="price" type="number" class="form-control">
             <div class="text-danger">@error('price') {{ $message }} @enderror</div>
         </div>
+        <div class="mb-3">
+            <input wire:model="temporary_images" type="file" name="images" class="form-control" multiple>
+            <div class="text-danger">@error('temporary_images.*') {{ $message }} @enderror</div>
+        </div>
         @if(!empty($images))
-            <div class="row">
+            <div class="row my-3">
                 <div class="col-12">
                     <p>Anteprima foto:</p>
-                    <div class="row border border-4 border-info rounded shadow py-4">
+                    <div class="row rounded shadow py-4 border-custom-preview">
                         @foreach ($images as $key => $image)
-
                             <div class="col my-3">
-
-                                <div class="img-preview mx-auto shadow rounded" style="background-image:url({{$image->temporaryUrl()}})"></div>
-                                <button class="btn btn-danger d-block text-center mt-2 mx-auto" type="button" wire:click="removeImage({{$key}})">Cancella</button>
+                                <div class="img-preview mx-auto shadow rounded" style="background-image:url({{$image->temporaryUrl()}});"></div>
+                                <button class="btn-rifiuta btn-danger btn  d-block text-center mt-2 mx-auto" type="button" wire:click="removeImage({{$key}})">Cancella</button>
                             </div>
-                            
                         @endforeach
                     </div>
                 </div>

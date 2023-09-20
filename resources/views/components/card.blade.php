@@ -10,7 +10,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <img src="https://picsum.photos/300" class="card-img-top p-2 rounded-4" alt="{{ $announcement->name }}">
+        <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/300' }}" class="card-img-top p-2 rounded-4" alt="{{ $announcement->name }}">
       </div>
     </div>
     <div class="row">

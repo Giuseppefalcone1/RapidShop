@@ -22,13 +22,19 @@ box-shadow: 0 0 0 0.25rem rgba(19, 193, 173, 0.4);
 }
 
 option:hover{
-    background-color: var(--colorPrimary);
-    color: var(--colorIce);
+background-color: var(--colorPrimary);
+color: var(--colorIce);
 }
 
 .img-preview{
 
-    width: 50px;
-    height: 50px;
-
+width: 150px;
+height: 150px;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+border: 2px solid var(--colorPrimary);
+}
+.border-custom-preview{
+border: 4px solid var(--colorPrimary);
 }

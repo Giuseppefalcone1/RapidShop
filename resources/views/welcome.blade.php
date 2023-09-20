@@ -16,7 +16,7 @@
             <div class="col-8 d-flex justify-content-center">
                 <form action="{{ route('announcements.search') }}" method="GET" class="search w-100" >
                     <input name="searched" placeholder="{{__('ui.searchPlaceholder')}}" type="text">
-                    <button type="submit">Ricerca</button>
+                    <button type="submit">{{__('ui.searchButton')}}</button>
                 </form>
             </div>
         </div>
