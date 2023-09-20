@@ -2,8 +2,9 @@
 
 namespace App\Livewire;
 
-use App\Models\Category;
 use Livewire\Component;
+use App\Models\Category;
+use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
@@ -74,9 +75,15 @@ class CreateAnnouncement extends Component
         $this->announcement->save();
         if (count($this->images)) {
             foreach ($this->images as $image) {
-                $this->announcement->images()->create([
-                    'path' => $image->store('images', 'public'),
+                // $this->announcement->images()->create([
+                //     'path' => $image->store('images', 'public'),
+                // ]);
+                $newFileName = "announcements/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create([
+                    'path' => $image->store($newFileName, 'public'),
                 ]);
+
+                dispatch(new ResizeImage($newImage->path , 300 , 300));
             }
         }
         session()->flash('status', 'Il tuo annuncio è stato inserito correttamente!');
