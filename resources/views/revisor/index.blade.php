@@ -20,12 +20,10 @@
                 <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
             </button>
         </form>
-
-
         @if ($announcement_to_check)
         <div class="container-fluid mt-4">
             <div class="row justify-content-center">
-                <div class="col-12 col-sm-5 col-md-6 col-lg-5">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5">
                     <x-cardShow :announcement='$announcement_to_check' />
                 </div>
             </div>
