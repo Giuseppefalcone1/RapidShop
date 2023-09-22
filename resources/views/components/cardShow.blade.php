@@ -24,6 +24,7 @@
                         <img src="{{!$announcement->images()->get()->isEmpty() ? $image->getUrl(300,300) : 'https://picsum.photos/300' }}" alt="" class="d-block w-100 rounded-4 img-fluid p-2">
                     </div>
                 </div>
+                @if($image->announcement->is_accepted == null)
                 <h4 class="p-3 pb-0">Revisione Immagini</h4>
                 <div class="col-12 p-3 pt-0">
                     <div class="container-fluid">
@@ -49,8 +50,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
+                @endif
             </div>
             @endforeach
         </div>
