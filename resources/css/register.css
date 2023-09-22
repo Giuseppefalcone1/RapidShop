@@ -6,7 +6,11 @@
     padding: 25px 35px;
     border: 5px solid rgb(255, 255, 255);
     box-shadow: rgba(19, 193, 173, 0.4) 0px 30px 30px -20px;
-    margin: 20px;
+    margin: auto;
+  }
+
+  .container2-register{
+    height: 75vh;
   }
 
 

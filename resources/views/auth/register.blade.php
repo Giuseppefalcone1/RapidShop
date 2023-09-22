@@ -1,6 +1,6 @@
 <x-layout>
-
-    <div class="container-register mx-auto">
+<div class="d-flex align-items-center container2-register">
+    <div class="container-register m-auto">
         <div class="heading">{{__('ui.register')}} </div>
         <form action="{{ route('register') }}" class="form" method="post">
             @csrf
@@ -45,5 +45,6 @@
             </div>
         </form>
     </div>
+</div>
 
 </x-layout>

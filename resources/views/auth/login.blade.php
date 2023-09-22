@@ -1,5 +1,5 @@
 <x-layout>
-
+<div class="d-flex align-items-center container2-register">
     <div class="container-register mx-auto">
         <div class="heading">Login</div>
         <form action="{{ route('login') }}" class="form" method="post">
@@ -32,5 +32,6 @@
             </div>
         </form>
     </div>
+</div>
 
 </x-layout>
