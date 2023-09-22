@@ -45,6 +45,7 @@ return [
     'price' => 'Prezzo',
     'add' => 'Aggiungi',
     'delete' => 'Cancella',
+    'preview' => 'Anteprima annuncio',
 
     // revisor
     'BecomeRevisor' => 'VUOI DIVENTARE REVISORE?',
@@ -56,6 +57,15 @@ return [
     'cancel-operation' => 'Annulla operazione',
     'ACCETTA' => 'Accetta',
     'RIFIUTA' => 'Rifiuta',
+    'imageReview' => 'Revisione immagini',
+    'adult' => 'Adulti',
+    'spoof' => 'Satira',
+    'racy' => 'Contenuto piccanti',
+    'medical' => 'Medicina',
+    'violence' => 'Violenza',
+
+
+
 
     //byCategory
     'category-explore' => 'Esplora la categoria',

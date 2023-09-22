@@ -5,9 +5,12 @@
         {{ session('message') }}
     </div>
     @endif
-    <header class="container">
-        <div class="row">
-            <div class="col-12 mb-4">
+    <header class="container-fluid header-bg">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+                <img src="./media/header-background.png" class="img-fluid" alt="Illustrazione header">
+            </div>
+            <div class="col-12 col-md-6 mb-4">
                 <h1 class="text-center">{{__('ui.headerTitle')}}</h1>
                 <h2 class="text-center subtitle-header" id="searchBarHeader">{{__('ui.headerSub')}}
                     <span>
@@ -25,14 +28,14 @@
                         </svg>
                     </span>
                 </h2>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-8 d-flex justify-content-center">
-                <form action="{{ route('announcements.search') }}" method="GET" class="search w-100">
-                    <input name="searched" placeholder="{{__('ui.searchPlaceholder')}}" type="text">
-                    <button type="submit">{{__('ui.searchButton')}}</button>
-                </form>
+                <div class="row justify-content-center">
+                    <div class="col-10 d-flex justify-content-center">
+                        <form action="{{ route('announcements.search') }}" method="GET" class="search w-100">
+                            <input name="searched" placeholder="{{__('ui.searchPlaceholder')}}" type="text">
+                            <button type="submit">{{__('ui.searchButton')}}</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 

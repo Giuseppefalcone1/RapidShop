@@ -28,12 +28,12 @@ return [
     'register'=> 'Regístrate ',
 
      // register
-     'name'=> 'Nombre completo',
+    'name'=> 'Nombre completo',
     'confirmPassword'=> 'Confirmar password',
     'doYouHaveAnAccount' => "Ya tienes una cuenta?",
 
      // footer
-     'becomeRevisor' =>'Conviértete En Revisor',
+    'becomeRevisor' =>'Conviértete En Revisor',
 
     //  create announcement
     'AddProduct' => 'AÑADIR ARTÍCULO',
@@ -44,6 +44,8 @@ return [
     'price' => 'Precio',
     'add' => 'Agregar',
     'delete' => 'Borrar',
+    'preview' => 'Vista previa del anuncio',
+
 
     // revisor
     'BecomeRevisor' => '¿QUIERES CONVERTIRTE EN REVISOR?',
@@ -55,6 +57,13 @@ return [
     'cancel-operation' => 'Cancelar operación',
     'ACCETTA' => 'Aceptar',
     'RIFIUTA' => 'Rechazar',
+    'imageReview' => 'Revision de imagen',
+    'adult' => 'Adultos',
+    'spoof' => 'Sátira',
+    'racy' => 'Contenido picante',
+    'medical' => 'Medicamento',
+    'violence' => 'Violencia',
+
 
     //byCategory
     'category-explore' => 'Explorar la categoría',

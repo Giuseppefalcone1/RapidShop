@@ -91,7 +91,7 @@ class CreateAnnouncement extends Component
                 RemoveFaces::withChain([
 
                     new Watermark($newImage->id),
-                    new ResizeImage($newImage->path , 300 , 300),
+                    new ResizeImage($newImage->path ,300 ,300),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
 

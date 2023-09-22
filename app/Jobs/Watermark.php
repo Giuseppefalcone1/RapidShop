@@ -37,8 +37,10 @@ class Watermark implements ShouldQueue
         $image = SpatieImage::load($srcPath);
         $image
             ->watermark('public/media/watermark.png')
-            ->watermarkPadding(5, 5, Manipulations::UNIT_PERCENT)
-            ->watermarkPosition(Manipulations::POSITION_CENTER);
+            ->watermarkPosition(Manipulations::POSITION_CENTER)
+            ->watermarkHeight(5, Manipulations::UNIT_PERCENT)
+            ->watermarkWidth(20, Manipulations::UNIT_PERCENT)
+            ->watermarkOpacity(50);
         $image->save($srcPath);
     }
 }

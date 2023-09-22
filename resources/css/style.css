@@ -1,7 +1,7 @@
 :root{
     --colorPrimary : #13c1ac;
     --colorSecondary : rgb(255, 164, 36);
-    --colorIce : rgb(229, 235, 234);
+    --colorIce : #e5ebea;
 }
 
 @font-face {
@@ -35,7 +35,7 @@ p, a, button {
 }
 
 .slot{
-    margin-top: 200px;
+    margin-top: 150px;
     margin-bottom: 100px;
 }
 
@@ -54,12 +54,12 @@ p, a, button {
 }
 
 .sf-primary{
-    color: var(--colorPrimary);
+    background-color: var(--colorPrimary);
 }
 .sf-secondary{
-    color: var(--colorSecondary);
+    background-color: var(--colorSecondary);
 }
 
 .sf-ice{
-    color: var(--colorIce);
+    background-color: var(--colorIce);
 }

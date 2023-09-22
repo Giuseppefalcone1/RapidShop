@@ -44,6 +44,8 @@ return [
     'price' => 'Price',
     'add' => 'Add',
     'delete' => 'Delete',
+    'preview' => 'Announcement preview',
+
 
         // revisor
     'BecomeRevisor' => 'DO YOU WANT TO BECOME A REVISOR?',
@@ -55,6 +57,13 @@ return [
     'cancel-operation' => 'Cancel operation',
     'ACCETTA' => 'Accept',
     'RIFIUTA' => 'Refuse',
+    'imageReview' => 'Images review',
+    'adult' => 'Adult',
+    'spoof' => 'Spoof',
+    'racy' => 'Racy',
+    'medical' => 'Medical',
+    'violence' => 'Violence',
+
 
     //byCategory
     'category-explore' => 'Explore the category',

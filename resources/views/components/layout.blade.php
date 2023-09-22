@@ -17,9 +17,10 @@
     @else
         <x-navbar display='d-block'></x-navbar>
     @endif
-<div class="min-vh-100 slot">
-    {{ $slot }}
-</div>
+    
+    <div class="min-vh-100 slot">
+        {{ $slot }}
+    </div>
 
     <x-footer></x-footer>
     @livewireScripts

@@ -30,19 +30,19 @@
             <div class="text-danger">@error('temporary_images.*') {{ $message }} @enderror</div>
         </div>
         @if(!empty($images))
-            <div class="row my-3">
-                <div class="col-12">
-                    <p>Anteprima foto:</p>
-                    <div class="row rounded shadow py-4 border-custom-preview">
-                        @foreach ($images as $key => $image)
-                            <div class="col my-3">
-                                <div class="img-preview mx-auto shadow rounded" style="background-image:url({{$image->temporaryUrl()}});"></div>
-                                <button class="btn-rifiuta btn-danger btn  d-block text-center mt-2 mx-auto" type="button" wire:click="removeImage({{$key}})">{{__("ui.delete")}}</button>
-                            </div>
-                        @endforeach
+        <div class="row my-3">
+            <div class="col-12">
+                <p>{{__("ui.preview")}}</p>
+                <div class="row rounded shadow py-4 border-custom-preview">
+                    @foreach ($images as $key => $image)
+                    <div class="col my-3">
+                        <div class="img-preview mx-auto shadow rounded" style="background-image:url({{$image->temporaryUrl()}});"></div>
+                        <button class="btn-rifiuta btn-danger btn  d-block text-center mt-2 mx-auto" type="button" wire:click="removeImage({{$key}})">{{__("ui.delete")}}</button>
                     </div>
+                    @endforeach
                 </div>
             </div>
+        </div>
         @endif
         <button type="submit" class="btn-login">{{__("ui.add")}}</button>
     </form>

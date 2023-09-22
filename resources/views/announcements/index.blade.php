@@ -5,7 +5,7 @@
                 <h1 class="text-center mb-5">{{__('ui.AllProducts')}}</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             @forelse ($announcements as $announcement)
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 my-3">
                     <x-card :announcement='$announcement' />

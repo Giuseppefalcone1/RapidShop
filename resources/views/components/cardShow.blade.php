@@ -6,15 +6,6 @@
     </div>
     <!-- Inizio carosello -->
     <div id="carouselExampleIndicators" class="carousel slide">
-        <!-- Indicatori carosello -->
-        <!-- <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div> -->
         @if (count($announcement->images))
         <div class="carousel-inner container-fluid">
             @foreach ($announcement->images as $image)
@@ -25,18 +16,18 @@
                     </div>
                 </div>
                 @if($image->announcement->is_accepted == null)
-                <h4 class="p-3 pb-0">Revisione Immagini</h4>
+                <h4 class="p-3 pb-0">{{__('ui.imageReview')}}</h4>
                 <div class="col-12 p-3 pt-0">
                     <div class="container-fluid">
                         <div class="row pt-0">
                             <div class="col-6 ps-0">
-                                <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                                <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                                <p>Contenuto piccante: <span class="{{$image->racy}}"></span></p>
+                                <p>{{__('ui.adult')}}: <span class="{{$image->adult}}"></span></p>
+                                <p>{{__('ui.spoof')}}: <span class="{{$image->spoof}}"></span></p>
+                                <p>{{__('ui.racy')}}: <span class="{{$image->racy}}"></span></p>
                             </div>
                             <div class="col-6">
-                                <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                                <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                                <p>{{__('ui.violence')}}: <span class="{{$image->violence}}"></span></p>
+                                <p>{{__('ui.medical')}}: <span class="{{$image->medical}}"></span></p>
                             </div>
                         </div>
                         <div class="row">
