@@ -3,9 +3,10 @@
 namespace App\Jobs;
 
 use App\Models\Image;
-use Spatie\Image\Image as SpatieImage;
 use Illuminate\Bus\Queueable;
+use Spatie\Image\Manipulations;
 use Illuminate\Queue\SerializesModels;
+use Spatie\Image\Image as SpatieImage;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -60,7 +61,7 @@ class RemoveFaces implements ShouldQueue
 
             $image = SpatieImage::load($srcPath);
 
-            $image->watermark(base_path('resources/img/blur.png'))
+            $image->watermark(base_path('resources/img/censura.jpg'))
                 ->watermarkPosition('top-left')
                 ->watermarkPadding($bounds[0][0], $bounds[0][1])
                 ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
