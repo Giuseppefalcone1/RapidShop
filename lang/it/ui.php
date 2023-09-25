@@ -41,7 +41,7 @@ return [
     'productName' => 'Nome Prodotto',
     'description' => 'Descrizione',
     'category' => 'Categoria',
-    'selectCategory' =>'seleziona una categoria',
+    'selectCategory' => 'seleziona una categoria',
     'price' => 'Prezzo',
     'add' => 'Aggiungi',
     'delete' => 'Cancella',
@@ -61,13 +61,13 @@ return [
     'category-explore' => 'Esplora la categoria',
     'no-announcement-category' => 'Non ci sono ancora annunci per questa categoria',
 
-       // redirect messages
-       'createAnnouncement' => 'Annuncio creato con successo, aspetta che un revisore lo accetti',
-       'announcementAccepted' => 'Annuncio accettato correttamente',
-       'announcementRefused' => 'Annuncio rifiutato correttamente',
-       'cancelAction' => 'Ultima operazione annullata correttamente',
-       'allToBeRevisioned' => 'Tutti gli annunci sono da revisionare',
-       'applicationSent' => 'Candidatura inviata con successo',
-       'becameRevisor' => "L'utente adesso e' revisore",
+    // redirect messages
+    'createAnnouncement' => 'Annuncio creato con successo, aspetta che un revisore lo accetti',
+    'announcementAccepted' => 'Annuncio accettato correttamente',
+    'announcementRefused' => 'Annuncio rifiutato correttamente',
+    'cancelAction' => 'Ultima operazione annullata correttamente',
+    'allToBeRevisioned' => 'Tutti gli annunci sono da revisionare',
+    'applicationSent' => 'Candidatura inviata con successo',
+    'becameRevisor' => "L'utente adesso e' revisore",
 
 ];

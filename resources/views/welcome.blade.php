@@ -6,11 +6,11 @@
     </div>
     @endif
     <header class="container-fluid header-bg">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6">
+        <div class="row align-items-center justify-content-center vh-100">
+            <!-- <div class="col-12 col-md-6">
                 <img src="./media/header-background.png" class="img-fluid" alt="Illustrazione header">
-            </div>
-            <div class="col-12 col-md-6 mb-4">
+            </div> -->
+            <div class="col-12 col-md-6 mb-4 sf-ice py-4 px-3 rounded-5 bordo-header">
                 <h1 class="text-center">{{__('ui.headerTitle')}}</h1>
                 <h2 class="text-center subtitle-header" id="searchBarHeader">{{__('ui.headerSub')}}
                     <span>
@@ -40,7 +40,7 @@
         </div>
 
     </header>
-    <main class="container mt-5">
+    <main class="container my-5">
         <section>
             <div class="row">
                 <div class="col-12">

@@ -18,7 +18,7 @@
         <x-navbar display='d-block'></x-navbar>
     @endif
     
-    <div class="min-vh-100 slot">
+    <div class="min-vh-100 {{request()->routeIs('welcome') ? 'layout-welcome' : 'slot'}}">
         {{ $slot }}
     </div>
 

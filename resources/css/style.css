@@ -39,6 +39,10 @@ p, a, button {
     margin-bottom: 100px;
 }
 
+.layout-welcome{
+    margin-bottom: 200px
+}
+
 .font-titoli {
     font-family: "PPFragment-SerifExtraBold";
 }
