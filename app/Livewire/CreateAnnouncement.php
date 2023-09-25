@@ -5,7 +5,6 @@ namespace App\Livewire;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use App\Jobs\RemoveFaces;
-use App\Jobs\Watermark;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
@@ -36,19 +35,19 @@ class CreateAnnouncement extends Component
         'temporary_images.*' => 'image|max:1024',
     ];
 
-    protected $messages = [
-        'name.required' => 'Il campo Nome è obbligatorio',
-        'description.required' => 'Il campo Descrizione è obbligatorio',
-        'description.min' => 'Il campo Descrizione deve avere più di 10 caratteri',
-        'price.required' => 'Il campo Prezzo è obbligatorio',
-        'price.numeric' => 'Il campo Prezzo deve contenere solo numeri',
-        'price.max' => 'Max: 99.999',
-        'category_id.required' => 'Il campo Categoria è obbligatorio',
-        'images.image' => 'Il file dev\'essere di tipo immagine',
-        'images.max' => 'Il file dev\'essere massimo 1mb',
-        'temporary_images.*.image' => 'I file devono essere immagini',
-        'temporary_images.*.max' => 'Il file dev\'essere massimo 1mb',
-    ];
+    // protected $messages = [
+    //     'name.required' => 'Il campo Nome è obbligatorio',
+    //     'description.required' => 'Il campo Descrizione è obbligatorio',
+    //     'description.min' => 'Il campo Descrizione deve avere più di 10 caratteri',
+    //     'price.required' => 'Il campo Prezzo è obbligatorio',
+    //     'price.numeric' => 'Il campo Prezzo deve contenere solo numeri',
+    //     'price.max' => 'Max: 99.999',
+    //     'category_id.required' => 'Il campo Categoria è obbligatorio',
+    //     'images.image' => 'Il file dev\'essere di tipo immagine',
+    //     'images.max' => 'Il file dev\'essere massimo 1mb',
+    //     'temporary_images.*.image' => 'I file devono essere immagini',
+    //     'temporary_images.*.max' => 'Il file dev\'essere massimo 1mb',
+    // ];
 
     public function updatedTemporaryImages()
     {
@@ -90,8 +89,7 @@ class CreateAnnouncement extends Component
 
                 RemoveFaces::withChain([
 
-                    new Watermark($newImage->id),
-                    new ResizeImage($newImage->path ,300 ,300),
+                    new ResizeImage($newImage->path , 300 , 300),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
 
