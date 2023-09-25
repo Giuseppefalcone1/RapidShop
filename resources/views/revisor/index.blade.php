@@ -44,6 +44,36 @@
                 </div>
             </div>
         </div>
+        @foreach ($announcement_to_check->images as $image)
+        @if($image->announcement->is_accepted == null)
+        <h4 class="p-3 pb-0">{{__('ui.imageReview')}}</h4>
+        <div class="col-12 p-3 pt-0">
+            <div class="container-fluid">
+                <div class="row pt-0">
+                    <div class="col-6 ps-0">
+                        <p>{{__('ui.adult')}}: <span class="{{$image->adult}}"></span></p>
+                        <p>{{__('ui.spoof')}}: <span class="{{$image->spoof}}"></span></p>
+                        <p>{{__('ui.racy')}}: <span class="{{$image->racy}}"></span></p>
+                    </div>
+                    <div class="col-6">
+                        <p>{{__('ui.violence')}}: <span class="{{$image->violence}}"></span></p>
+                        <p>{{__('ui.medical')}}: <span class="{{$image->medical}}"></span></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <h4 class="pt-3 pb-0">Tags</h4>
+                        @if($image->labels)
+                        @foreach($image->labels as $label)
+                        <p class="d-inline">{{$label}}, </p>
+                        @endforeach
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+        @endforeach
         @endif
     </div>
 </x-layout>
