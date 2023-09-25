@@ -13,7 +13,7 @@ return [
     'headerTitle' => 'Buy and Sell used products',
     'headerSub' => 'with just a click',
     'lastProducts' => 'LAST PRODUCTS',
-    'noProduct' => 'NO PRODUCT YET',
+    'noProduct' => 'There are no announcements yet',
 
     // card
     'publishedBy' => 'Published by',

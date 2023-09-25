@@ -13,7 +13,7 @@ return [
     'headerTitle' => 'Compra e Vendi articoli usati',
     'headerSub' => 'con un click',
     'lastProducts' => 'ULTIMI PRODOTTI',
-    'noProduct' => 'NON CI SONO ANCORA ANNUNCI',
+    'noProduct' => 'Non ci sono ancora annunci',
 
     // card
     'publishedBy' => 'Pubblicato da',

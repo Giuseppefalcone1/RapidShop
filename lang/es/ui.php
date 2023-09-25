@@ -13,7 +13,7 @@ return [
     'headerTitle' => 'Compra y venta de artículos usados',
     'headerSub' => 'con un clic',
     'lastProducts' => 'ÚLTIMOS PRODUCTOS',
-    'noProduct' => 'AÚN NO HAY ANUNCIOS',
+    'noProduct' => 'Todavía no hay anuncios',
 
     // card
     'publishedBy' => 'Publicado por',
@@ -21,26 +21,26 @@ return [
 
     // index announcement
     'AllProducts' => 'TODOS LOS PRODUCTOS',
-    'noResult'=> 'La búsqueda no arrojó resultados',
+    'noResult' => 'La búsqueda no arrojó resultados',
 
     // login
     'dontHaveAccount' => "¿No tiene una cuenta?",
-    'register'=> 'Regístrate ',
+    'register' => 'Regístrate ',
 
-     // register
-    'name'=> 'Nombre completo',
-    'confirmPassword'=> 'Confirmar password',
+    // register
+    'name' => 'Nombre completo',
+    'confirmPassword' => 'Confirmar password',
     'doYouHaveAnAccount' => "Ya tienes una cuenta?",
 
-     // footer
-    'becomeRevisor' =>'Conviértete En Revisor',
+    // footer
+    'becomeRevisor' => 'Conviértete En Revisor',
 
     //  create announcement
     'AddProduct' => 'AÑADIR ARTÍCULO',
     'productName' => 'Nombre del producto',
     'description' => 'Descripción',
     'category' => 'Categoría',
-    'selectCategory' =>'seleccione una categoría',
+    'selectCategory' => 'seleccione una categoría',
     'price' => 'Precio',
     'add' => 'Agregar',
     'delete' => 'Borrar',
@@ -69,14 +69,14 @@ return [
     'category-explore' => 'Explorar la categoría',
     'no-announcement-category' => 'Aún no hay anuncios para esta categoría',
 
-       // redirect messages
-       'createAnnouncement' => 'Listado creado exitosamente, espere a que un revisor lo acepte',
-       'announcementAccepted' => 'Anuncio aceptado exitosamente',
-       'announcementRefused' => 'Anuncio rechazado exitosamente',
-       'cancelAction' => 'La última operación se eliminó correctamente',
-       'allToBeRevisioned' => 'Todos los anuncios deben ser revisados.',
-       'applicationSent' => 'Solicitud enviada exitosamente',
-       'becameRevisor' => "El usuario ahora es un revisor",
+    // redirect messages
+    'createAnnouncement' => 'Listado creado exitosamente, espere a que un revisor lo acepte',
+    'announcementAccepted' => 'Anuncio aceptado exitosamente',
+    'announcementRefused' => 'Anuncio rechazado exitosamente',
+    'cancelAction' => 'La última operación se eliminó correctamente',
+    'allToBeRevisioned' => 'Todos los anuncios deben ser revisados.',
+    'applicationSent' => 'Solicitud enviada exitosamente',
+    'becameRevisor' => "El usuario ahora es un revisor",
 
 
 
