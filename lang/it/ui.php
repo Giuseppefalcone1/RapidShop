@@ -45,6 +45,7 @@ return [
     'price' => 'Prezzo',
     'add' => 'Aggiungi',
     'delete' => 'Cancella',
+    'preview' => 'Anteprima annuncio',
 
     // revisor
     'BecomeRevisor' => 'VUOI DIVENTARE REVISORE?',

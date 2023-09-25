@@ -1,5 +1,5 @@
 .header-bg {
-  background-image: url('/public/media/sfondo_header_doodle.png');
+  background: linear-gradient(rgba(229, 235, 234, 0.7) , rgba(229, 235, 234, 0.7) ) , url('/public/media/sfondo_header_doodle.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@
 }
 
 .bordo-header {
-  border: 3px dashed black;
+  
   box-shadow: 8px 8px 15px rgb(99, 99, 99);
 }
 
