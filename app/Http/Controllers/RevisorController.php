@@ -24,14 +24,14 @@ class RevisorController extends Controller
         $announcement->setAccepted(true);
         return redirect()
             ->back()
-            ->with('message', 'Annuncio accettato correttamente');
+            ->with('message', __('ui.announcementAccepted'));
     }
     public function rejectAnnouncement(Announcement $announcement)
     {
         $announcement->setAccepted(false);
         return redirect()
             ->back()
-            ->with('message', 'Annuncio rifutato correttamente');
+            ->with('message', __('ui.announcementRefused'));
     }
     public function annulAnnouncement()
     {
@@ -44,11 +44,11 @@ class RevisorController extends Controller
             $announcement->setAccepted(null);
             return redirect()
             ->back()
-            ->with('message', 'Ultima operazione annullata correttamente');
+            ->with('message', __('ui.cancelAction'));
         }
         return redirect()
             ->back()
-            ->with('message', 'Tutti gli annunci sono da revisionare ');
+            ->with('message', __('ui.allToBeRevisioned'));
 
     }
 
@@ -64,12 +64,12 @@ class RevisorController extends Controller
 
         return redirect()
             ->route('welcome')
-            ->with('message', 'Candidatura inviata con successo!');
+            ->with('message', __('ui.applicationSent'));
     }
 
     public function makeRevisor(User $user)
     {
         Artisan::call('rapidshop:makeUserRevisor', ['email' => $user->email]);
-        return redirect('/')->with('message', "L'utente è diventato un revisore");
+        return redirect('/')->with('message', __('ui.becameRevisor'));
     }
 }

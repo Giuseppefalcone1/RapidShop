@@ -22,7 +22,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label">{{__("ui.price")}}</label>
-            <input wire:model="price" type="number" class="form-control">
+            <input wire:model="price" type="number" novalidate  class="form-control">
             <div class="text-danger">@error('price') {{ $message }} @enderror</div>
         </div>
         <div class="mb-3">

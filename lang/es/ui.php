@@ -67,7 +67,19 @@ return [
 
     //byCategory
     'category-explore' => 'Explorar la categoría',
-    'no-announcement-category' => 'Aún no hay anuncios para esta categoría'
+    'no-announcement-category' => 'Aún no hay anuncios para esta categoría',
+
+       // redirect messages
+       'createAnnouncement' => 'Listado creado exitosamente, espere a que un revisor lo acepte',
+       'announcementAccepted' => 'Anuncio aceptado exitosamente',
+       'announcementRefused' => 'Anuncio rechazado exitosamente',
+       'cancelAction' => 'La última operación se eliminó correctamente',
+       'allToBeRevisioned' => 'Todos los anuncios deben ser revisados.',
+       'applicationSent' => 'Solicitud enviada exitosamente',
+       'becameRevisor' => "El usuario ahora es un revisor",
+
+
+
 
 
 

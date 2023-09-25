@@ -35,20 +35,6 @@ class CreateAnnouncement extends Component
         'temporary_images.*' => 'image|max:1024',
     ];
 
-    // protected $messages = [
-    //     'name.required' => 'Il campo Nome è obbligatorio',
-    //     'description.required' => 'Il campo Descrizione è obbligatorio',
-    //     'description.min' => 'Il campo Descrizione deve avere più di 10 caratteri',
-    //     'price.required' => 'Il campo Prezzo è obbligatorio',
-    //     'price.numeric' => 'Il campo Prezzo deve contenere solo numeri',
-    //     'price.max' => 'Max: 99.999',
-    //     'category_id.required' => 'Il campo Categoria è obbligatorio',
-    //     'images.image' => 'Il file dev\'essere di tipo immagine',
-    //     'images.max' => 'Il file dev\'essere massimo 1mb',
-    //     'temporary_images.*.image' => 'I file devono essere immagini',
-    //     'temporary_images.*.max' => 'Il file dev\'essere massimo 1mb',
-    // ];
-
     public function updatedTemporaryImages()
     {
         if (
@@ -98,7 +84,7 @@ class CreateAnnouncement extends Component
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
-        session()->flash('status', 'Il tuo annuncio è stato inserito correttamente!');
+        session()->flash('status', __('ui.createAnnouncement'));
         $this->redirect('/announcement/create');
         $this->clear();
     }

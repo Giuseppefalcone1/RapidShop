@@ -6,30 +6,30 @@
             @csrf
             <div class="row">
                 <div class="col-6">
-                    <input required="" class="input" type="text" name="name" id="email"
+                    <input  class="input" type="text" name="name" id="email"
                         placeholder="{{__('ui.name')}}">
                     @error('name')
-                        <div class="alert alert-danger">{{ $message }}</div>
+                        <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="col-6">
-                    <input required="" class="input" type="email" name="email" id="email"
+                    <input  class="input" type="email" name="email" id="email"
                         placeholder="E-mail">
                     @error('email')
-                        <div class="alert alert-danger">{{ $message }}</div>
+                        <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input required="" class="input" type="password" name="password" id="password"
+                    <input  class="input" type="password" name="password" id="password"
                         placeholder="Password">
                     @error('password')
-                        <div class="alert alert-danger">{{ $message }}</div>
+                        <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="col-6">
-                    <input required="" class="input" type="password" name="password_confirmation" id="password"
+                    <input  class="input" type="password" name="password_confirmation" id="password"
                         placeholder="{{__('ui.confirmPassword')}}">
                 </div>
             </div>

@@ -67,7 +67,21 @@ return [
 
     //byCategory
     'category-explore' => 'Explore the category',
-    'no-announcement-category' => "There aren't announcements for this category"
+    'no-announcement-category' => "There aren't announcements for this category",
+
+    // redirect messages
+    'createAnnouncement' => 'Announcement created successfully, wait for a revisor to accetp it',
+    'announcementAccepted' => 'Announcement accepted successfully',
+    'announcementRefused' => 'Announcement refused successfully',
+    'cancelAction' => 'Last operation successfully deleted',
+    'allToBeRevisioned' => 'All the announcement have to be revisioned',
+    'applicationSent' => 'Application sent successfully',
+    'becameRevisor' => "The user is now a revisor",
+
+
+
+
+
 
 
 
