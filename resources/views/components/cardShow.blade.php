@@ -13,36 +13,36 @@
                 <div class="col-12">
                     <div class="carousel-item @if ($loop->first) active @endif">
                         <img src="{{!$announcement->images()->get()->isEmpty() ? $image->getUrl(300,300) : 'https://picsum.photos/300' }}" alt="" class="d-block w-100 rounded-4 img-fluid p-2">
-                    </div>
-                </div>
-                @if($image->announcement->is_accepted == null)
-                <h4 class="p-3 pb-0">{{__('ui.imageReview')}}</h4>
-                <div class="col-12 p-3 pt-0">
-                    <div class="container-fluid">
-                        <div class="row pt-0">
-                            <div class="col-6 ps-0">
-                                <p>{{__('ui.adult')}}: <span class="{{$image->adult}}"></span></p>
-                                <p>{{__('ui.spoof')}}: <span class="{{$image->spoof}}"></span></p>
-                                <p>{{__('ui.racy')}}: <span class="{{$image->racy}}"></span></p>
-                            </div>
-                            <div class="col-6">
-                                <p>{{__('ui.violence')}}: <span class="{{$image->violence}}"></span></p>
-                                <p>{{__('ui.medical')}}: <span class="{{$image->medical}}"></span></p>
+                        @if($image->announcement->is_accepted == null)
+                        <h4 class="p-3 pb-0">{{__('ui.imageReview')}}</h4>
+                        <div class="col-12 p-3 pt-0">
+                            <div class="container-fluid">
+                                <div class="row pt-0">
+                                    <div class="col-6 ps-0">
+                                        <p>{{__('ui.adult')}}: <span class="{{$image->adult}}"></span></p>
+                                        <p>{{__('ui.spoof')}}: <span class="{{$image->spoof}}"></span></p>
+                                        <p>{{__('ui.racy')}}: <span class="{{$image->racy}}"></span></p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>{{__('ui.violence')}}: <span class="{{$image->violence}}"></span></p>
+                                        <p>{{__('ui.medical')}}: <span class="{{$image->medical}}"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 p-0">
+                                        <h4 class="pt-3 pb-0">Tags</h4>
+                                        @if($image->labels)
+                                            @foreach($image->labels as $label)
+                                                <p class="d-inline">{{$label}}, </p>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-12 p-0">
-                                <h4 class="pt-3 pb-0">Tags</h4>
-                                @if($image->labels)
-                                    @foreach($image->labels as $label)
-                                        <p class="d-inline">{{$label}}, </p>
-                                    @endforeach
-                                @endif
-                            </div>
-                        </div>
+                        @endif
                     </div>
                 </div>
-                @endif
             </div>
             @endforeach
         </div>

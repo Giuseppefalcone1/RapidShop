@@ -57,6 +57,11 @@ return [
     'cancel-operation' => 'Annulla operazione',
     'ACCETTA' => 'Accetta',
     'RIFIUTA' => 'Rifiuta',
+    'adult' => 'Adulti',
+    'spoof' => 'Satira',
+    'racy' => 'Contenuto ammiccante',
+    'medical' => 'Medicina',
+    'violence' => 'Violenza',
 
     //byCategory
     'category-explore' => 'Esplora la categoria',
@@ -69,6 +74,6 @@ return [
     'cancelAction' => 'Ultima operazione annullata correttamente',
     'allToBeRevisioned' => 'Tutti gli annunci sono da revisionare',
     'applicationSent' => 'Candidatura inviata con successo',
-    'becameRevisor' => "L'utente adesso e' revisore",
+    'becameRevisor' => "L'utente adesso è revisore",
 
 ];
