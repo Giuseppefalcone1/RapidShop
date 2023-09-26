@@ -19,7 +19,7 @@ class PublicController extends Controller
 
     public function bycategory(Category $category){
         $category = Category::findOrFail($category->id);
-        $announcements = $category->announcements;
+        $announcements = $category->announcements()->where('is_accepted', true)->orderBy('created_at','desc')->get();;
         return view('bycategory' , compact('category', 'announcements'));
     }
 
